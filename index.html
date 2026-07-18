@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Konecta 2030 — The BPO Countdown</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-brand">KONECTA 2030</span>
+    <a href="#resumen">Summary</a>
+    <a href="#tesis">Thesis</a>
+    <a href="#cronologia">2026→2030</a>
+    <a href="#simulador">Simulator</a>
+    <a href="#escenarios">Scenarios</a>
+    <a href="#senales">Signals</a>
+    <a href="#decisiones">Decisions</a>
+    <a href="#plan90">90-day plan</a>
+    <a href="#metodo">Method</a>
+  </div>
+</nav>
+
+<!-- ============ 00 · COVER ============ -->
+<main>
+<section id="portada">
+  <div class="kicker">Interactive strategic report · July 2026 · v0.7 — research + full cross-model red team integrated</div>
+  <h1>Konecta 2030<br><span class="suave" style="font-weight:400">The BPO Countdown</span></h1>
+  <p class="destacado portada-tesis">By 2030, most of the interactions that generate Konecta's revenue today
+  could be handled by an AI at a fraction of the cost. The question is not whether this happens.
+  It is <em>who captures that fraction</em> — and what Konecta does with the margin in between.</p>
+  <div class="cifras">
+    <div class="cifra"><div class="n">~€2,030M</div><div class="l">2024 revenue <span class="tag dato">FACT</span></div></div>
+    <div class="cifra"><div class="n">~120,000</div><div class="l">people across 26+ countries <span class="tag dato">FACT</span></div></div>
+    <div class="cifra"><div class="n">€2.5B</div><div class="l">Katalyst 2028 target <span class="tag dato">FACT</span></div></div>
+    <div class="cifra"><div class="n">18-30 months</div><div class="l">estimated decision window <span class="tag hipo">HYPOTHESIS</span></div></div>
+  </div>
+  <div id="video" style="margin:28px 0">
+    <video controls preload="metadata" style="width:100%;aspect-ratio:16/9;border-radius:14px;background:#16182b;display:block">
+      <source src="video/konecta-2030-countdown.mp4" type="video/mp4">
+      Your browser does not support embedded video.
+    </video>
+    <div style="font-family:var(--sans);font-size:12.5px;color:var(--tinta-suave);margin-top:8px">Summary video (3-4 min) — generated with Gemini Notebooks from this report's research corpus.</div>
+  </div>
+</section>
+
+<!-- ============ 01 · SUMMARY ============ -->
+<section id="resumen">
+  <span class="num">01</span>
+  <h2>Summary for the committee</h2>
+  <p class="destacado">Konecta is, at the same time, one of the companies most exposed to agentic AI in the world
+  and one of the best positioned to lead it. Those two things will not stay in balance for long.</p>
+  <p>The core business — human interactions at scale — is exactly what AI agents are learning to do. But Konecta
+  has what no AI lab has: the operational knowledge of millions of real interactions, enterprise relationships
+  with ~500 clients, presence in the last mile of the customer relationship, and a proprietary platform (Kolibri)
+  already in production.</p>
+  <div class="caja nota">
+    <h4>The three decisions that cannot wait <span class="tag hipo">v0.2 · pending final calibration with research</span></h4>
+    <p style="margin:0"><strong>1.</strong> Proactively cannibalize key accounts with Konecta's own AI — before someone else does.<br>
+    <strong>2.</strong> Decide whether Kolibri is an internal tool or the next P&amp;L line.<br>
+    <strong>3.</strong> Negotiate the workforce transition at scale while there is still time and cash to do it well.</p>
+  </div>
+  <p class="suave" style="font-family:var(--sans);font-size:14px">This report is not a closed recommendation: it is a
+  navigation instrument. Every forecast is auditable, every figure carries a label
+  (<span class="tag dato">FACT</span> <span class="tag infer">INFERENCE</span> <span class="tag hipo">HYPOTHESIS</span>)
+  and the scenarios are recalibrated quarterly against observable signals.</p>
+</section>
+
+<!-- ============ 02 · THESIS ============ -->
+<section id="tesis">
+  <span class="num">02</span>
+  <h2>The thesis</h2>
+  <p>For twenty years, outsourced customer experience has been sold by the hour of human work.
+  Agentic AI breaks the equation: the marginal cost of a resolved interaction tends to zero, and with it,
+  the per-FTE pricing model. This is not the incremental automation the industry already knows (IVR, chatbots, RPA):
+  it is the first technology able to complete the interaction end-to-end.</p>
+  <p>The comforting analogy — <em>"the cloud took twenty years and only 25% migrated"</em> — deserves to be taken
+  seriously, and precisely for that reason, stress-tested. Adopting AI agents requires no capex, no system migration,
+  no vendor switch. It is bought by API and paid by outcome. And the one barrier that used to protect outsourcers —
+  integration with legacy client systems — is being dissolved by <em>computer use</em>: models that read screens and
+  click through AS400/Citrix like a human does. <span class="tag dr">✓ DR3</span></p>
+
+  <div class="caja">
+    <h4>The market has already voted — before the P&amp;L did <span class="tag dr">✓ DR1</span></h4>
+    <p style="margin-bottom:8px">Public-market investors are not waiting for BPO revenues to fall; they are re-pricing the sector's
+    <em>right to exist</em>. Teleperformance trades at ~€3.3B market cap on ~€10.2B revenue (≈0.3× sales) after a −29.3% single-day
+    crash when Klarna announced its OpenAI assistant. TTEC's market cap: ~$114M. TaskUs: from a $1.5-1.6B take-private
+    valuation to ~$450M in about a year — <em>while</em> its AI Services grow 36%. Short interest on TP, Concentrix and TTEC kept rising into 2026. <span class="tag dato">FACT</span></p>
+    <p style="margin:0">Meanwhile, Gartner projects 80% of common service issues resolved autonomously by 2029 — yet found only 20% of
+    organizations had actually cut agent headcount by 2026. <strong>That gap between what the market has priced and what
+    operations have executed is the window this report is about.</strong> It is Konecta's greatest risk (the multiple compresses
+    anyway) and its greatest opportunity (execution is still open). <span class="tag dato">FACT</span> + <span class="tag infer">INFERENCE</span></p>
+  </div>
+
+  <h3>When does AI reach ≥ median-human quality at marginal cost? <span class="tag dr">✓ DR3 · Gemini Deep Think</span></h3>
+  <table>
+    <thead><tr><th>Interaction type</th><th>Year</th><th>Prob.</th></tr></thead>
+    <tbody>
+      <tr><td>Informational</td><td>Already reached (2024-25)</td><td>99%</td></tr>
+      <tr><td>Simple transactional (payments, plan changes)</td><td>2026 ±0.5y</td><td>95%</td></tr>
+      <tr><td>Collections</td><td>2027 ±1y</td><td>80%</td></tr>
+      <tr><td>Expert technical support (L2/IT)</td><td>2028 ±1y</td><td>70%</td></tr>
+      <tr><td>Retention with negotiation</td><td>2028 ±1.5y</td><td>60%</td></tr>
+      <tr><td>Complex multi-department complaints</td><td>2029 ±1y</td><td>55%</td></tr>
+      <tr><td>Consultative / high-ticket sales</td><td>2030 ±2y</td><td>40%</td></tr>
+      <tr><td>Emotional emergencies (health, crises)</td><td>&gt;2032</td><td>15%</td></tr>
+    </tbody>
+  </table>
+  <p class="suave" style="font-family:var(--sans);font-size:13.5px">△ <strong>Cross-model divergence — the most important one in this report.</strong> The table above forecasts <em>capability</em> (DR3).
+  Production evidence (DR2) runs far lower: in real 2026 deployments, retention is 0-10% automated, complaints 5-20%, and even
+  "simple informational" runs at 40-70% with 30-60% escalation to humans. Klarna's own arc — $0.32 → $0.19 cost per transaction,
+  then partial re-hiring — captures both truths. Capability ≠ deployed reality; the gap is orchestration, risk, and acceptance.
+  The simulator's penetration lever expresses exactly this gap, and the red team will interrogate it.</p>
+
+  <h3>Six auditable forecasts <span class="tag hipo">v0.2 — red-team pass pending</span></h3>
+  <p class="suave" style="font-family:var(--sans);font-size:14px">Each with a probability, a deadline and a verifiable
+  resolution criterion. Being recalibrated with the multi-model research and cross-model red team before the session.</p>
+  <div class="caja">
+    <div class="pronostico"><div class="pron-prob">65%</div><div class="pron-body">
+      <strong>F1.</strong> Before Jun-2027, at least one Konecta top-10 client will move &gt;30% of its interactions off the BPO — whether via in-house agents or a platform vendor.
+      <div class="crit">Resolution: public announcements, client annual report, or verifiable reduction in contracted volume. Definition tightened per red team: what matters is volume leaving the BPO, not who builds the agent.
+      <span class="tag dr">✓ DR1: Santander already targets 40% of UK call volume via AI self-service · △ RT (GPT 5.6 SOL): raise to ~70%</span></div></div></div>
+    <div class="pronostico"><div class="pron-prob">50% ±20</div><div class="pron-body">
+      <strong>F2.</strong> Before Dec-2027, the average price per automated interaction in BPO contract renewals will have fallen &gt;50% vs 2025.
+      <div class="crit">Resolution: Everest/NelsonHall reports, sector renewal data.
+      <span class="tag dr">△ THE WIDEST CROSS-MODEL SPREAD IN THIS REPORT — GPT 5.6 SOL: 30% (pricing units are mutating to outcome/credits/gain-share, making the metric incomparable) · Gemini DT: 90% (automated interactions become a loss leader bundled into licenses, &gt;75% collapse) · DR2 evidence: billed all-in prices deflate only −18%/yr. We keep 50% with a wide band and flag this as the single highest-information signal to track.</span></div></div></div>
+    <div class="pronostico"><div class="pron-prob">55%</div><div class="pron-body">
+      <strong>F3.</strong> Before Dec-2028, at least 2 of {Teleperformance, Concentrix, Foundever, TTEC, TaskUs} will show net reported workforce reductions &gt;15% vs their 2025 headcount — regardless of the stated cause.
+      <div class="crit">Resolution: audited headcount in annual reports (named list fixes the movable-denominator attack).
+      <span class="tag dr">△ RT consensus (both models): the cuts will happen but nobody will announce them "citing AI" — they will run through silent attrition and "operational simplification" (✓DR4). The original announcement-based wording was scored ~0-35% by the red team; redefined to observable headcount.</span></div></div></div>
+    <div class="pronostico"><div class="pron-prob">20%</div><div class="pron-body">
+      <strong>F4.</strong> Before Dec-2028, strictly-defined AI revenue — software, agents and platform licensing, not re-labeled "AI-driven" services — will exceed 25% of total revenue in at least one global BPO major.
+      <div class="crit">Resolution: revenue breakdown in annual reports, applying the strict definition. <span class="tag dr">✓ DR1: TaskUs closest on mix shift</span>
+      <span class="tag dr">△ RT (both models): as loosely worded this was ~80% (Genpact already labels 48% of revenue "Data-Tech-AI"); strictly defined, Concentrix would need to 41× its $60M AI ARR (~244% CAGR). Set at 20% — and that low number is itself a finding: beware "AI-led revenue" targets that can be met by relabeling.</span></div></div></div>
+    <div class="pronostico"><div class="pron-prob">55%</div><div class="pron-body">
+      <strong>F5.</strong> Before Dec-2029, consumers' personal AI assistants will generate &gt;5% of inbound contacts in telco or banking in at least one major market.
+      <div class="crit">Resolution: operator data or sector studies. The agent-vs-agent scenario. <span class="tag dr">✓ DR3: 60% for US e-commerce by 2029</span></div></div></div>
+    <div class="pronostico"><div class="pron-prob">70%</div><div class="pron-body">
+      <strong>F6.</strong> Before Dec-2030, the EU will have passed rules requiring a human alternative in essential services.
+      <div class="crit">Resolution: publication in the EU Official Journal or national transposition. <span class="tag dr">✓ DR3: AI self-disclosure rules 90% by 2027 (a weaker, earlier form)</span>
+      <span class="tag dr">✓ DR4 + verified 18-Jul: Spain's Customer Service Law — bans AI-only service, mandates a human on request, 95% of calls answered &lt;3 min — was approved by Congress in Nov-2025 and awaits final Senate passage. The national-level version of this forecast is nearly resolved. △ RT: raise probability</span></div></div></div>
+  </div>
+</section>
+</main>
+
+<!-- ============ 03 · TIMELINE ============ -->
+<section id="cronologia">
+  <div class="ancho"><span class="num">03</span><h2>Timeline 2026 → 2030</h2>
+  <p style="max-width:760px">A phase-by-phase narrative with verifiable milestones — not a prediction, but the central
+  trajectory that the signals in section 06 will confirm or refute quarter by quarter.
+  <span class="tag dr">✓ tech calibrated with DR3 · market/economics pending DR1-DR2</span></p></div>
+  <div class="crono">
+    <div>
+      <div class="fase" data-dash='{"periodo":"H2 2026","auto":32,"coste":"$0.015","costePct":80,"arr":"~$0.5B","arrPct":6}'>
+        <div class="fase-fecha">SECOND HALF OF 2026</div>
+        <h3>The tense calm</h3>
+        <p>The 2024-25 pilots move into production. Voice agents now answer below the human perception threshold
+        (&lt;300ms) and handle interruptions naturally; agentic reliability on 3-5 step tasks has reached 82% on
+        τ-bench — but collapses to 48% beyond 8 steps. That gap defines what gets automated first. The first
+        pay-per-resolution contracts appear in renewals — Crescendo publishes $1.25 per resolution; Transcom sells
+        outcome-based models on FCR/CSAT. Clients move too: Santander targets 40% of UK call volume via AI self-service;
+        Home Depot rolls out a Gemini voice agent nationally. In Konecta, Kolibri captures use cases faster than the
+        organization can prioritize them — the bottleneck is no longer the technology.
+        Two regulatory clocks start ticking: the AI Act's transparency obligations (Art. 50) become effective in
+        August 2026, and Spain's contact-center collective agreement (III Convenio) expires in December 2026 —
+        unions are expected to demand "AI layoff vetoes" and human quotas in the next one. <span class="tag dr">✓ DR3 · DR1 · DR4</span></p>
+      </div>
+      <div class="fase" data-dash='{"periodo":"H1 2027","auto":38,"coste":"$0.011","costePct":58,"arr":"~$1B","arrPct":12}'>
+        <div class="fase-fecha">FIRST HALF OF 2027</div>
+        <h3>First cracks</h3>
+        <p>Renewals arrive with explicit deflation — already observed at −15/−25% of contract value on automatable
+        scopes when clients bring their own stack. Software gets cheaper too: Microsoft ran a 40% discount on
+        Dynamics Contact Center — a land grab that compresses the whole value pool. A global competitor
+        announces the first major workforce reduction citing automation. Open-weight models deployable on-premise
+        match the 2024 frontier — and European banks start asking for sovereign deployments as a contract condition.
+        The question in every client QBR shifts from "what are you doing with AI?" to "why am I still paying for hours?"
+        <span class="tag dr">✓ DR3 · DR1</span></p>
+      </div>
+      <div class="fase bifurcacion" data-dash='{"periodo":"H2 2027","auto":45,"coste":"$0.008","costePct":42,"arr":"~$2B","arrPct":25}'>
+        <div class="fase-fecha">SECOND HALF OF 2027 · ⚠ THE FORK</div>
+        <h3>The decision</h3>
+        <p>The moment when protecting current revenue and building future revenue stop being compatible.
+        Cannibalizing your own account with AI costs revenue today; not doing it hands that account to a third party
+        tomorrow. What the committee decides in the 12 months before this point determines which of the three
+        scenarios materializes. <strong>This is where the report stops being a story and becomes yours: the simulator
+        (section 04) lets you choose your beliefs and see their consequences.</strong></p>
+      </div>
+      <div class="fase" data-dash='{"periodo":"2028","auto":58,"coste":"$0.003","costePct":16,"arr":"~$4B","arrPct":50}'>
+        <div class="fase-fecha">2028 · KATALYST CHECKPOINT</div>
+        <h3>Divergence</h3>
+        <p>The year of the €2.5B target. In S2 it is reached — but with an unrecognizable mix: pay-per-resolution,
+        platform licensing and <em>liability-as-a-service</em> (charging to own the legal risk of AI errors) offset
+        the erosion of voice. Machine-to-machine endpoints appear: the client's AI and the company's AI settle disputes
+        in milliseconds via API, because forcing consumer agents through human IVRs breaks operations. In S1 the target
+        is reached nominally or missed — and it barely matters: the valuation multiple has already compressed,
+        because the market doesn't pay for revenue, it pays for mix. <span class="tag dr">✓ DR3</span></p>
+      </div>
+      <div class="fase" data-dash='{"periodo":"2029-2030","auto":76,"coste":"$0.002","costePct":10,"arr":"~$8B+","arrPct":85}'>
+        <div class="fase-fecha">2029 → 2030</div>
+        <h3>Four possible Konectas</h3>
+        <p>The fog clears. By 2029, ~72% of historical interaction volume is automatable end-to-end at ≥ human quality
+        (central estimate). The global CX/BPO sector has reorganized: those who cannibalized in time operate fleets of
+        AI agents — one human overseeing 25+ — with people concentrated in the high-value, high-empathy work;
+        those who didn't compete in a price auction over a shrinking human volume. Section 05 describes the four
+        Konectas that can exist in 2030. <span class="tag dr">✓ DR3</span></p>
+      </div>
+    </div>
+    <aside class="dash" id="dash">
+      <h4>Industry panel · <span id="dash-periodo">H2 2026</span> <span class="tag hipo" style="background:#34375a;color:#b9bcd6">v0.2</span></h4>
+      <div class="dash-metric" id="dm-auto"><div class="dm-n">32%</div><div class="dm-l">of interaction volume automatable e2e at ≥ human quality (central) ✓DR3</div><div class="dash-bar"><i style="width:32%"></i></div></div>
+      <div class="dash-metric" id="dm-coste"><div class="dm-n">$0.015</div><div class="dm-l">AI voice inference cost per minute ✓DR3</div><div class="dash-bar"><i style="width:80%"></i></div></div>
+      <div class="dash-metric" id="dm-arr"><div class="dm-n">~$0.5B</div><div class="dm-l">aggregate disclosed ARR of AI-native CX disruptors (Sierra, Cresta, Crescendo, Parloa, Decagon…) ✓DR1</div><div class="dash-bar"><i style="width:6%"></i></div></div>
+      <div style="font-size:10.5px;color:#8f93b8;margin-top:16px">Automation &amp; raw cost ✓DR3 · disruptor ARR ✓DR1 · all-in voice cost (incl. telephony, orchestration, oversight) is ~30× raw: €0.45/interaction in 2026, deflating −18%/yr ✓DR2 · projections beyond 2026 are central-scenario estimates.</div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ 04 · SIMULATOR ============ -->
+<section id="simulador">
+  <span class="num">04</span>
+  <h2>The simulator — the cockpit</h2>
+  <p style="max-width:760px">This model does not predict the future: it shows the consequences of beliefs.
+  Move the six levers according to your own reading of the world and watch which Konecta that reading produces in 2030.
+  The starting figures are public and editable — correct them with the real numbers.</p>
+  <div class="caja" style="max-width:760px">
+    <h4>What the engine is calibrated on <span class="tag dr">✓ DR2</span></h4>
+    <p style="margin-bottom:8px;font-family:var(--sans);font-size:14.5px">
+    <strong>Human cost per voice interaction (2026, fully loaded):</strong> Spain €2.2 · Mexico €1.1 · Colombia €0.9 · Philippines €0.45 · Egypt €0.4 · India €0.25.
+    <strong>AI voice, all-in:</strong> €0.45 today → €0.20 by 2030 (central) — deflating only −18%/yr because the floor is telephony, orchestration and oversight, not tokens.
+    <strong>Who bills what:</strong> Salesforce charges €2/conversation and Intercom $0.99/outcome for what costs cents in inference — the software layer is capturing the surplus today.</p>
+    <p style="margin:0;font-family:var(--sans);font-size:14.5px">
+    The engine follows DR2's two disciplines: <strong>technical savings ≠ contractual savings ≠ captured savings</strong>, and
+    simple-inquiry metrics are never extrapolated to the whole portfolio. Klarna's benchmark — cost per transaction
+    $0.32 → $0.19 (−40%), followed by partial re-hiring — is the calibration anchor for what "real" looks like.</p>
+  </div>
+  <div id="sim-app">
+    <div class="sim-grid">
+      <div class="sim-panel">
+        <h4>Starting point (editable)</h4>
+        <div class="baseline-grid" id="sim-baseline">
+          <label>2024 revenue (€M)<input data-k="ingresos2024" inputmode="decimal"></label>
+          <label>Workforce<input data-k="empleados" inputmode="numeric"></label>
+          <label>EBITDA margin (%)<input data-k="margenEbitda" inputmode="decimal"></label>
+          <label>% revenue from interactions<input data-k="mixVoz" inputmode="decimal"></label>
+        </div>
+        <h4 style="margin-top:22px">The six levers of uncertainty</h4>
+        <div id="sim-palancas"></div>
+      </div>
+      <div>
+        <div class="presets">
+          <button data-preset="s1">S1 · Erosion</button>
+          <button data-preset="s2" class="on">S2 · Metamorphosis</button>
+          <button data-preset="s3">S3 · Human Fortress</button>
+          <button data-preset="s4">S4 · Platform Capture</button>
+          <button id="btn-consenso">Save committee consensus</button>
+        </div>
+        <div class="kpis">
+          <div class="kpi" id="kpi-ing"><div class="k-n">—</div><div class="k-l">2030 revenue</div><div class="k-d"></div></div>
+          <div class="kpi" id="kpi-ebitda"><div class="k-n">—</div><div class="k-l">2030 EBITDA</div><div class="k-d"></div></div>
+          <div class="kpi" id="kpi-plantilla"><div class="k-n">—</div><div class="k-l">2030 workforce</div><div class="k-d"></div></div>
+          <div class="kpi" id="kpi-esc"><div class="k-n">—</div><div class="k-l">Resulting scenario</div><div class="k-d"></div></div>
+        </div>
+        <div class="katalyst" id="katalyst"></div>
+        <div style="font-family:var(--sans);font-size:12.5px;color:var(--tinta-suave);margin-top:8px">Under central calibration no scenario reaches €2.5B by 2028.
+        That is a finding, not a bug: leading the deflation of your own core unit shrinks revenue while it builds value — see D6, "The Katalyst question".</div>
+        <div class="sim-viz caja" style="margin-bottom:0"><h4 style="font-family:var(--sans);font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta-suave)">Revenue mix: 2024 vs 2030</h4><svg id="viz-mix"></svg></div>
+        <div class="sim-viz caja" style="margin-bottom:0"><h4 style="font-family:var(--sans);font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta-suave)">Workforce: 2030 composition</h4><svg id="viz-fte"></svg></div>
+        <div class="ventana"><div class="v-n" id="ventana-n">—</div>
+          <div class="v-l">The value of the window: cumulative 2026-2030 EBITDA lost if the decision to cannibalize
+          arrives one year late, holding every other belief constant. The window is double: starting early also lets
+          natural attrition (30-40%/yr) absorb the workforce transition at near-zero exit cost — starting late forces
+          paid exits at €15-30k each in Spain. <span style="color:#b9bcd6">✓DR4</span></div></div>
+        <details class="formulas">
+          <summary>How is this calculated? — every formula, in the open</summary>
+          <pre>
+Volume unit: €M valued at 2024 human prices — an explicit value-
+equivalent, not an interaction count. Constants in assets/data.js.
+
+interaction_volume_2030 = revenue_2024 × %interactions × (1 + 3.0%)^6
+                          × jevons, where jevons = 1 + 0.01×(deflation−8)
+                          (cheaper interactions expand demand — RT2 fix)
+effective_penetration   = AI_penetration × (1 − 0.45 × friction)
+                          (friction models delay & cost, not prohibition —
+                          a full AI ban is scenario S3, outside this slider)
+konecta_human_volume    = vol_2030 × (1 − eff_pen) × retention
+                          retention = 0.65 + 0.25 × cannibalization
+premium_human_revenue   = human_vol × premium_share × (1 + premium)
+                          premium_share = 0.25 ÷ √(1 + premium)   [≥ 0.08]
+                          (downward-sloping demand — RT2 fix)
+captured_automated_vol  = vol_2030 × eff_pen × (1 − lost_to_others) × capture
+                          capture = 0.10 + 0.45 × cannibalization
+base_human_revenue      = human_vol × (1−premium_share) × legacy_repricing
+                          legacy = max(0.60, 0.95 − 0.012×deflation)
+                          (clients renegotiate human rates against the
+                          AI alternative — RT2 fix)
+AI_revenue              = captured_vol ÷ deflation × 1.35 (platform ARPU)
+new_revenue             = AI+consulting base × (1 + 0.08 + 0.14×cannib.)^6
+workforce_2030          = human_FTEs×0.93 + AI_oversight + technology
+                          oversight = captured_AI_workload ÷ 22 × 2.0  ✓DR3
+                          (indexed to captured volume — lose the account,
+                          lose the oversight jobs; RT2 misread audited)
+                          technology = AI+new revenue ÷ €150k/FTE (blended
+                          architects + offshore AI ops — RT2 fix, was 280k)
+EBITDA                  = Σ revenue × per-line margin (11% / 22% / 26%)
+                          − 0.06 × migrated_vol      (dual-structure drag)
+                          − 0.05 × stranded_shortfall (fixed costs when
+                            the human business shrinks below 90% of 2024)
+                          − severance toll: exits beyond silent-attrition
+                            capacity × €4,500 blended (✓DR4), annualized;
+                            attrition share = 0.50 + 0.35×cannibalization
+                            (deciding late is what makes exits expensive)
+katalyst_2028           = 2024 + Δ×0.5 (J-curve: price pressure front-loads,
+                          AI revenue back-loads — RT2 fix, was linear 0.67)
+value_of_window         = [EBITDA(cannib.) − EBITDA(cannib.−25, floored at 0)]
+                          × 2.5  (sum of a linearly ramped annual gap,
+                          2026-30 — replaces the narrative 3.2× scalar)
+conservation            : human + automated pools partition vol_2030;
+                          all shares within each pool ≤ 100%. Sliders are
+                          normalized in code — no unit ambiguity.
+
+Calibration: technology ✓DR3 · market ✓DR1 · economics ✓DR2 ·
+regulation ✓DR4 · hardened by cross-model red-team audit (RT2):
+cannibalization triple-coupling attenuated, premium demand curve
+inverted, transition costs added, AI margin cut 32→26 (gross ≠ EBITDA).
+Honesty note, quoting our own auditor: this is a strategic belief
+translator, not a financial plan — six subjective sliders made
+consequential, never precise. The per-account "board table"
+(90-day move #3) is where real numbers replace these.</pre>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+<!-- ============ 05 · SCENARIOS ============ -->
+<section id="escenarios">
+  <span class="num">05</span>
+  <h2>The four scenarios</h2>
+  <p>There were three scenarios in this report — until the cross-model red team ran. <strong>Both frontier models,
+  independently, flagged the same missing future</strong> (S4), and both cut the weight of Metamorphosis.
+  Weights below are the post-red-team synthesis; the votes are shown transparently. They are not predictions:
+  they are probability masses that the signals in section 06 will shift every quarter.</p>
+  <div class="esc-grid">
+    <div class="esc s1"><div class="peso">35%</div><h3>S1 · Erosion</h3>
+      <p><strong>The reaction comes late.</strong> Konecta protects its current revenue; clients in-source
+      or migrate to disruptors; renewals enter a price war. The end state is the worst negotiating position a BPO
+      can hold: clients keep the AI layer and buy only "human fallback as a utility" <span class="tag dr">✓DR1</span>.
+      In 2030: similar nominal revenue, compressed margin, a declining BPO multiple, and a workforce transition
+      done under duress — expensive, rushed, and without the cash to negotiate it well.</p></div>
+    <div class="esc s2"><div class="peso">30%</div><h3>S2 · Metamorphosis</h3>
+      <p><strong>Cannibalize yourself before others do.</strong> Konecta proactively migrates its accounts to its own
+      AI agents priced per resolution, turns Kolibri into a business line and its operational knowledge into the moat.
+      The move is proven in both directions: Crescendo (AI-native) bought a BPO to industrialize it; TaskUs (BPO)
+      shifted its mix until traditional CX is only ~45% of revenue <span class="tag dr">✓DR1</span>.
+      And hyper-regulation becomes the moat: DORA + AI Act compliance is so onerous it expels pure AI startups from
+      corporate B2B — Konecta, already ISO 42001-certified, sells banks the legal shield to deploy AI without owning
+      the risk <span class="tag dr">✓DR4</span>. The margin prize is real: CX software runs at 55-66% gross margin vs ~15%
+      for BPO — Kolibri-as-product is the claim on that layer <span class="tag dr">✓DR2</span>.
+      In 2030: a smaller but far more qualified workforce, an unrecognizable mix, higher margin, and the
+      algorithmic-humanism thesis turned into competitive advantage — humans exactly where they add the most value.</p></div>
+    <div class="esc s3"><div class="peso">15%</div><h3>S3 · Human Fortress</h3>
+      <p><strong>Adoption disappoints.</strong> Reliability, regulation and customer preference slow deep automation;
+      human interaction gains a value premium. This scenario has real evidence behind it: Klarna partially re-hired
+      humans after quality eroded; only 20% of organizations had actually cut agent headcount by 2026; and Spain's
+      draft law would make AI-only service illegal, mandating a human within 3 minutes
+      <span class="tag dr">✓DR1 · DR4</span>. In 2030: human BPO endures as a premium category,
+      and whoever kept capacity and quality — while still automating the basics — captures that premium.
+      The risk of this scenario is not living it: it is using it as an excuse not to decide.
+      The sharpest version of this play, from the red team: become the global monopoly on the <em>hardest</em> 15-50% —
+      grave complaints, borderline fraud, vulnerable customers, litigation risk — the volume AI can never legally own,
+      priced accordingly.</p></div>
+    <div class="esc s4"><div class="peso">20%</div><h3>S4 · Platform Capture</h3>
+      <p><strong>Konecta executes well — and still loses the valuable layer.</strong> Salesforce, Google, Microsoft and
+      the CCaaS vendors ship native agents inside the licenses where client data already lives. Clients neither in-source
+      nor buy Konecta's AI: they switch a module on. Konecta transforms, grows "AI-led" revenue — and becomes a channel:
+      an implementer and operator of someone else's platform, keeping service margin while the platform keeps product,
+      data, pricing and roadmap. <strong>The uncomfortable edge:</strong> the Google alliance that powers Konecta's
+      capabilities is also the single most plausible path into this scenario. Both red-team models proposed this
+      future independently. <span class="tag dr">△ RT ×2</span></p></div>
+  </div>
+  <p class="suave" style="font-family:var(--sans);font-size:13.5px">Weight votes — GPT 5.6 SOL: 40/30/10/20 · Gemini Deep Think: 50/15/15/20 ·
+  <strong>synthesis shown: 35/30/15/20</strong>. Red-teamers structurally over-discount incumbent agency; Konecta's real assets
+  (ISO 42001, Kolibri in production, ~500 enterprise relationships) justify S2 above the red-team average. The committee should
+  debate exactly this delta.</p>
+  <div class="caja nota"><h4>The stress test of algorithmic humanism</h4>
+  <p style="margin:0">All four scenarios take the same hypothesis seriously: that empathy, judgment and human
+  connection have lasting economic value. The difference between S2 and S1 is not believing or not believing in
+  the human — it is whether that belief becomes an active strategy (choosing where humans win and automating the rest)
+  or a passive alibi (waiting for the market to confirm it). The simulator lets you find the exact point
+  where one turns into the other.</p></div>
+</section>
+
+<!-- ============ 06 · SIGNALS ============ -->
+<section id="senales">
+  <span class="num">06</span>
+  <h2>Signals and triggers</h2>
+
+  <h3 style="margin-top:8px">The friction map <span class="tag dr">✓ DR4</span></h3>
+  <p>Regulatory and labor friction is not a single number — it is radically asymmetric across Konecta's footprint.
+  This asymmetry is itself a strategic instrument: it dictates where automation runs fastest, where the human-premium
+  play is strongest, and what one exit costs.</p>
+  <table>
+    <thead><tr><th>Geography</th><th>Friction (1-10)</th><th>Driver</th><th>Est. exit cost / employee</th></tr></thead>
+    <tbody>
+      <tr><td>Spain</td><td><strong>9.0</strong></td><td>AI Act + right-to-a-human bill + union algorithm audits (Art. 64.4 ET) + judicialized EREs</td><td>€15,000-30,000</td></tr>
+      <tr><td>Colombia</td><td><strong>8.5</strong></td><td>Free-trade-zone tax benefits (20% rate) require employment quotas; BPO = ~790k jobs, systemic employer</td><td>€3,000-6,000</td></tr>
+      <tr><td>Brazil</td><td><strong>8.0</strong></td><td>Ultra-protective labor courts (MPT); AI bill PL 2338 advancing</td><td>€5,000-9,000</td></tr>
+      <tr><td>Mexico</td><td><strong>7.0</strong></td><td>Full severance (90d + 20/yr); REPSE scrutiny</td><td>€4,000-8,000</td></tr>
+      <tr><td>Argentina</td><td>5.5</td><td>Union confrontation vs. state deregulation</td><td>€2,500-5,000</td></tr>
+      <tr><td>Peru</td><td>4.5</td><td>Pro-AI law (31814); tariffed severance</td><td>€2,500-4,500</td></tr>
+      <tr><td>India</td><td>3.0</td><td>Flexible IT/BPO framework; government avoids over-regulating AI</td><td>€1,000-2,500</td></tr>
+      <tr><td>Egypt</td><td>2.0</td><td>State priority: retain FDI at all costs</td><td>€500-1,500</td></tr>
+    </tbody>
+  </table>
+
+  <h3>The signal board</h3>
+  <p>Thirteen observable signals, each with a threshold and a pre-agreed action. When a threshold is crossed, scenario
+  weights move — without waiting for the next strategic plan. <span class="tag dr">✓ tech from DR3 · market from DR1 · regulation/labor from DR4 · economics pending DR2</span></p>
+  <table>
+    <thead><tr><th>Signal</th><th>Tracking source</th><th>Threshold (v0.2)</th><th>If crossed…</th></tr></thead>
+    <tbody>
+      <tr><td>E2E AI containment in real industry deployments</td><td>Vendor reports + Everest/NelsonHall</td><td>&gt;40% sustained</td><td>+weight S1/S2, −S3; accelerate cannibalization</td></tr>
+      <tr><td>Price deflation in BPO renewals</td><td>Own pipeline + analysts</td><td>&gt;30% YoY</td><td>+S1; activate per-resolution repricing</td></tr>
+      <tr><td>Aggregate ARR of AI-native CX disruptors</td><td>Funding rounds, financial press</td><td>&gt;$5B</td><td>+S1/S2; evaluate defensive M&amp;A</td></tr>
+      <tr><td>Top-20 clients announcing in-sourcing</td><td>QBRs + client annual reports</td><td>≥2 clients</td><td>+S1; immediate counter-offer with own AI</td></tr>
+      <tr><td>Net workforce of the 5 BPO majors</td><td>Annual reports</td><td>−10% aggregate</td><td>+S1/S2; anticipate own social agreement</td></tr>
+      <tr><td>EU "right to a human" regulation</td><td>OJEU, transpositions</td><td>Formal proposal</td><td>+S3; monetize compliance (ISO 42001)</td></tr>
+      <tr><td>Inbound contacts generated by consumers' personal AI agents</td><td>Own operations data</td><td>&gt;2% of inbound</td><td>Activate agent-to-agent strategy (M2M endpoints)</td></tr>
+      <tr><td>NPS of AI vs human by interaction type</td><td>Own operations (Konecta's gold)</td><td>AI ≥ human in complex interactions</td><td>+S2; re-segment the premium human catalog</td></tr>
+      <tr><td>Frontier-model progress on hard agentic benchmarks (τ-bench/SWE-bench Hard) <span class="tag dr">✓DR3</span></td><td>Public leaderboards, lab releases</td><td>Successor models stall &lt;90% through 2027</td><td>+S3 ("scaling wall"); slow down automation capex</td></tr>
+      <tr><td>IV Convenio negotiations (Spain) <span class="tag dr">✓DR4</span></td><td>SIMA minutes, union bulletins</td><td>Unions table an "AI layoff veto" or human quotas as a blocking condition</td><td>+S3 in Iberia; accelerate silent-attrition planning before Dec-2026</td></tr>
+      <tr><td>Colombia free-trade-zone employment quotas <span class="tag dr">✓DR4</span></td><td>MinCIT / DIAN</td><td>Formal proposal to tighten quotas tied to tax benefits</td><td>Re-sequence Latam automation; protect zona-franca P&amp;L</td></tr>
+      <tr><td>Voluntary attrition rate (own HRIS) <span class="tag dr">✓DR4</span></td><td>Internal dashboards</td><td>Structural attrition &lt;3%/month</td><td>Silent-attrition strategy loses viability; re-plan transition cost</td></tr>
+      <tr><td>ISO/IEC 42001 in Tier-1 RFPs <span class="tag dr">✓DR4</span></td><td>Sales pipeline / procurement</td><td>&gt;30% of Tier-1 tenders require certification</td><td>+S2; price the compliance-shield premium explicitly</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ 07 · DECISIONS ============ -->
+<section id="decisiones">
+  <span class="num">07</span>
+  <h2>Decisions for the committee</h2>
+  <p>Six dilemmas with no technical answer. No analysis resolves them: they are leadership choices.
+  Each with its decision gate — the date after which not deciding is deciding.</p>
+  <div class="caja"><h4>D1 · Cannibalization <span class="tag" style="background:var(--indigo-suave);color:var(--indigo)">gate: Q4 2026</span></h4>
+    <p style="margin:0">Do we proactively migrate 2-3 top accounts to our own AI agent priced per resolution, accepting the short-term
+    revenue loss? Who picks the accounts: us, or the competitor who gets there first?</p></div>
+  <div class="caja"><h4>D2 · Kolibri <span class="tag" style="background:var(--indigo-suave);color:var(--indigo)">gate: Q1 2027</span></h4>
+    <p style="margin:0">Internal efficiency tool or product with its own P&amp;L? The menu already says "Sell". If it is a product:
+    do we also sell it to companies that compete with Konecta in operations?</p></div>
+  <div class="caja"><h4>D3 · Build or buy <span class="tag" style="background:var(--indigo-suave);color:var(--indigo)">gate: continuous</span></h4>
+    <p style="margin:0">The AI-native CX disruptors are still buyable — but the window is narrowing: the best assets are being
+    absorbed by software vendors and PE, not by BPOs (Zendesk bought Forethought; Decagon tendered at $4.5B; Sierra at $10B)
+    <span class="tag dr">✓DR1</span>. Do we acquire capability (technology + talent + logos)
+    or trust our partner route (Google, CrewAI, Uniphore)? What happens if a competitor buys first?</p></div>
+  <div class="caja"><h4>D4 · The workforce transition <span class="tag" style="background:var(--indigo-suave);color:var(--indigo)">gate: before the IV Convenio negotiation (Dec 2026)</span></h4>
+    <p style="margin-bottom:8px">The research is blunt on this one. Mass reskilling at scale has historically failed: Spanish banking redeployed
+    &lt;10% of 115,000 exits internally; the realistic BPO redeployment rate is 10-15%. Meanwhile a forced ERE in Spain invites judicial
+    audit of the algorithms and costs €15-30k per exit (Telefónica paid €380-455k). The viable instrument is <strong>silent attrition</strong>:
+    the sector's natural 30-40% annual rotation, unreplenished, can absorb the whole transition at near-zero exit cost —
+    <em>if it starts early</em>. Delay compresses the required reduction rate above natural attrition, and every excess exit is paid at full legal price. <span class="tag dr">✓DR4</span></p>
+    <p style="margin:0">So the real questions: Is €20M/3yr of reskilling an operational plan or an ESG narrative — and which do we need it to be?
+    When do we freeze net hiring, and in which geographies first (the friction map says: automate via Egypt/India, humanize via Spain)?
+    And for those who remain handling the hardest 15% of interactions: pay, status and psychological support must be redesigned,
+    or burnout empties the fortress. One tactical rule from the evidence: <strong>never announce headcount savings from AI</strong> —
+    Klarna's press releases became legal and reputational ammunition. <span class="tag dr">✓DR3 · DR4</span></p></div>
+  <div class="caja"><h4>D5 · The price <span class="tag" style="background:var(--indigo-suave);color:var(--indigo)">gate: Q2 2027</span></h4>
+    <p style="margin:0">Do we lead the transition to outcome-based pricing — including <em>liability-as-a-service</em>, charging to own
+    the legal risk of AI errors — or defend the per-FTE model until clients break it? Whoever sets the new price defines the new market.</p></div>
+  <div class="caja" style="border-left:4px solid var(--coral)"><h4>D6 · The Katalyst question <span class="tag" style="background:var(--indigo-suave);color:var(--indigo)">gate: next board cycle</span></h4>
+    <p style="margin-bottom:8px">The red team's hardest attack deserves to be faced head-on: <em>you cannot lead a massive deflation of your
+    core business unit and simultaneously promise the top line grows from €2,030M to €2,500M.</em> The simulator agrees:
+    under central calibration, none of the four scenarios reaches €2.5B by 2028. Successful Metamorphosis may well mean
+    a <strong>smaller, more profitable, more valuable</strong> Konecta — higher margin, higher multiple, lower revenue. <span class="tag dr">△ RT</span></p>
+    <p style="margin:0">So the question is not "how do we reach €2.5B?" but <strong>"is revenue the right target variable for 2028 — or
+    should Katalyst's headline metric become EBITDA, mix, or enterprise value?"</strong> A target that can only be met by re-labeling
+    revenue as AI-led (see F4) would be worse than a smaller honest one. This is the committee's decision to make — the report's
+    job is to make sure it is made consciously, not by inertia.</p></div>
+</section>
+
+<!-- ============ 08 · 90-DAY PLAN ============ -->
+<section id="plan90">
+  <span class="num">08</span>
+  <h2>90-day plan — no-regret moves</h2>
+  <p>Valid in all three scenarios. None requires betting on one particular future.</p>
+  <table>
+    <thead><tr><th>#</th><th>Move</th><th>90-day deliverable</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><strong>Signals war-room.</strong> Instrument the 13 signals in section 06 with an owner and monthly cadence.</td><td>First operational dashboard</td></tr>
+      <tr><td>2</td><td><strong>Cannibalization pilot.</strong> One top account, own AI agent, per-resolution pricing, with a savings-sharing clause.</td><td>Term sheet signed with 1 client</td></tr>
+      <tr><td>3</td><td><strong>The board table.</strong> For the top-20 clients: renewal date, automatable volume (2026/28/30), data &amp; tech ownership, price curve, margin at risk, capturable AI revenue, transition cost, churn risk. This is the account-by-account causal model that connects every forecast in this report to Konecta's actual EBITDA — without it, scenario weights are literature. <span class="tag dr">△ RT</span></td><td>Top-20 exposure &amp; opportunity table</td></tr>
+      <tr><td>4</td><td><strong>Kolibri: "Sell" business case.</strong> Value Kolibri as a product: pricing, channel, conflict of interest.</td><td>Decision D2 documented for the committee</td></tr>
+      <tr><td>5</td><td><strong>Social transition framework.</strong> Design — not announcement — of the transition: silent-attrition plan by geography (hiring-freeze sequencing per the friction map), realistic redeployment targets (10-15%, not fantasy), and the IV Convenio negotiating position before Dec-2026. <span class="tag dr">✓DR4</span></td><td>Draft framework + convenio mandate</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ 09 · METHOD ============ -->
+<section id="metodo" style="border-bottom:none">
+  <span class="num">09</span>
+  <h2>Method and sources</h2>
+  <p>This report was built through a deliberately adversarial multi-model process:</p>
+  <div class="caja">
+    <p style="margin-bottom:8px"><strong>1. Deep research</strong> — four independent deep-research runs:
+    market &amp; competition + economics of disruption (GPT 5.6 SOL); technology trajectory + regulation &amp; labor (Gemini Deep Think). <em>Status: all four received and integrated.</em></p>
+    <p style="margin-bottom:8px"><strong>2. Synthesis and modeling</strong> — consolidation, scenarios, simulator and writing (Claude Opus 4.8).</p>
+    <p style="margin-bottom:8px"><strong>3. Cross-model red team</strong> — each model attacked the scenarios, probabilities and formulas. Results were structural, not cosmetic:
+    both models <em>independently</em> proposed the same missing scenario (S4 · Platform Capture, now in the report); both cut S2's weight;
+    forecast definitions were tightened (F1, F3, F4); the simulator engine was hardened twice by independent audits (premium demand curve inverted, transition costs and severance toll added, levers decoupled, legacy repricing and Jevons volume effect introduced);
+    and one red-team factual claim was itself caught and corrected by verification (Spain's customer-service law: passed Congress, still pending Senate — not yet in force).
+    Divergences that survived are documented, not averaged away (see F2).</p>
+    <p style="margin:0"><strong>4. Epistemic labeling</strong> — every figure is a <span class="tag dato">FACT</span> (verifiable public source),
+    an <span class="tag infer">INFERENCE</span> (derived from facts) or a <span class="tag hipo">HYPOTHESIS</span> (argued belief). The simulator's model is open on this very page.</p>
+  </div>
+  <h3>Update criteria</h3>
+  <p class="suave" style="font-family:var(--sans);font-size:15px">This document expires. It must be recalibrated: (a) quarterly against the signals in section 06;
+  (b) upon any discontinuous jump in frontier-model capabilities; (c) upon material regulatory changes in the EU or Latam;
+  (d) whenever Konecta's internal data contradicts any INFERENCE in this report — in that case, the internal data wins.</p>
+  <h3 id="fuentes">Sources</h3>
+  <p class="suave" style="font-family:var(--sans);font-size:14px">Two tiers, kept honestly apart: <strong>Tier A</strong> — primary sources verified directly by the synthesis team.
+  <strong>Tier B</strong> — sources as cited by the deep-research models (GPT 5.6 SOL, Gemini Deep Think); named and dated, but accessed through the model's research pass.
+  Known cross-source contradictions are documented, not averaged away — e.g. Foundever's official 150,000 headcount vs ~82,000 observed in labor-market data;
+  TaskUs's $1.5B take-private valuation vs ~$450M market cap a year later; and the central one: capability forecasts (DR3) vs production evidence (DR2).</p>
+
+  <details class="formulas"><summary>Tier A — verified directly (Konecta, leadership, regulation)</summary>
+    <ul style="font-family:var(--sans);font-size:13.5px;line-height:1.8;margin:10px 0 0 20px">
+      <li>ABC — interview with Nourdine Bihmane, CEO Konecta (21-Dec-2025): Katalyst 2028, €2.5B target, Konecta Digital ~30% growth, €20M/3yr reskilling, CrewAI/Uniphore/Kraken partnerships, first end-to-end AI sales agent.</li>
+      <li>Expansión — interview with N. Bihmane (5-Mar-2025): 130,000 employees, €2,030M revenue 2024, market positions (#1 ES/IT/CO/PE/AR, 5th global), English as official language.</li>
+      <li>BCG "Please Decode" podcast (Mar-2026): "the window for planning is closing — time for execution"; Europe's AI path.</li>
+      <li>konecta.com — corporate: 28 countries, ~500 clients, Kolibri agentic platform, ISO/IEC 42001 certification, Everest PEAK Matrix 2025 Leader, Frost Radar 2025 Leader.</li>
+      <li>relacioncliente.es — ExpoContact 2026: Kolibri public launch; "2 years integrating AI, 18 months building Katalyst".</li>
+      <li>N. Bihmane, <em>Rester humain — L'entreprise à l'épreuve de l'IA</em> (Les Petits Matins, May-2026): algorithmic humanism framework.</li>
+      <li>La Moncloa (13-Nov-2025, re-verified 18-Jul-2026): Customer Services Law — approved by Congress, pending Senate; bans AI-only service, human on request, 95% of calls &lt;3 min.</li>
+      <li>Cinco Días (Nov-2024): Google Cloud–Konecta strategic alliance.</li>
+      <li>EU AI Act (Reg. 2024/1689): Art. 5 emotion-inference ban (Feb-2025), Art. 50 transparency (Aug-2026), Annex III high-risk categories.</li>
+    </ul>
+  </details>
+  <details class="formulas"><summary>Tier B — market &amp; competition (as cited in DR1, GPT 5.6 SOL)</summary>
+    <ul style="font-family:var(--sans);font-size:13.5px;line-height:1.8;margin:10px 0 0 20px">
+      <li>Reuters / FT / Barron's (2024-2026): Teleperformance −29.3% intraday (Feb-2024); rising short interest on TP, Concentrix, TTEC (2026); market caps.</li>
+      <li>Company filings &amp; releases: TP FY2025 (EBITA 14.6%), Concentrix Q4 FY2025 + FY2026 guidance cut, Foundever (S&amp;P rating actions), TTEC FY2025, TaskUs (AI Services +36.1%, failed take-private), iQor annual letter, Intelcia, Transcom Q2-2026, Atento restructuring, Genpact Q4-2025 ("Data-Tech-AI" 48%).</li>
+      <li>Gartner (2025-26): 80% of common service issues resolved autonomously by 2029, −30% opex; only 20% of orgs had cut agent headcount; &gt;40% of agentic projects cancelled by 2027.</li>
+      <li>ISG Index (2025): BPO ACV −14%.</li>
+      <li>Everest Group PEAK Matrix 2025 · Frost Radar 2025 · NelsonHall (position not openly verifiable — flagged).</li>
+      <li>Funding/valuations (2024-26): Decagon ($4.5B tender), Sierra ($10B / &gt;$100M ARR), Parloa ($3B / &gt;$50M ARR), Cresta (&gt;$100M ARR), Crescendo (&gt;$100M ARR, $1.25/resolution, PartnerHero acquisition), PolyAI, Ada, Zendesk–Forethought.</li>
+      <li>Platform moves: Salesforce Agentforce (18,500 deals), Microsoft Dynamics CC (40% discount), Google CCAI + Home Depot voice agent, AWS Connect Customer Competency, ServiceNow (100M cases/mo), Genesys Cloud AI (70% of clients), NICE–Cognigy.</li>
+      <li>In-sourcing cases: Klarna (2/3 of chats, 700 FTE-eq., $40M; later partial re-hiring), Santander UK (~240k calls, 40% of volume, €1B AI savings program), AT&amp;T, McKinsey utility case.</li>
+    </ul>
+  </details>
+  <details class="formulas"><summary>Tier B — economics (as cited in DR2, GPT 5.6 SOL)</summary>
+    <ul style="font-family:var(--sans);font-size:13.5px;line-height:1.8;margin:10px 0 0 20px">
+      <li>Public AI pricing (2026): OpenAI gpt-realtime ($32/$64 per 1M audio tokens; translate $0.034/min), Google Gemini Live ($0.0368/min), Intercom Fin ($0.99/outcome), Salesforce Agentforce (€2/conversation), Freshdesk ($0.49/session). Sierra/Decagon/Parloa: enterprise-quote only (opacity itself a signal).</li>
+      <li>Production cases with numbers: Klarna cost/transaction $0.32→$0.19 (Q1'23→Q1'25), Octopus/Kraken (Magic Ink 60% of outbound emails; Arlo 4% of inbound, CSAT 76 vs 72), Verizon (170M calls/yr, 80% intent prediction), NatWest Cora (11M queries/yr), BofA Erica (700M interactions 2025), Norse Atlantic (vendor claim vs Wired/FTC complaints), Air Canada chatbot ruling.</li>
+      <li>Labor cost bases: Spain Convenio Contact Center 2026 (€17,139.58 level 10, +3.4%), minimum wages Colombia/Peru/Mexico/Egypt/Philippines/Argentina 2024-26, India salary budgets (~9%/yr), employer charges by country, Indeed/Computrabajo market rates.</li>
+      <li>Margin ladder: TP 14.6% EBITA · Concentrix 15.0% adj. EBITDA · TaskUs 21.0% · Five9 55.1% GM · NICE 66.4% GM / 30.8% op.</li>
+    </ul>
+  </details>
+  <details class="formulas"><summary>Tier B — technology &amp; regulation (as cited in DR3/DR4, Gemini Deep Think)</summary>
+    <ul style="font-family:var(--sans);font-size:13.5px;line-height:1.8;margin:10px 0 0 20px">
+      <li>τ-bench / Stanford CRFM / HuggingFace leaderboards (2024-26): 45%→82% on 3-5-step CX tasks; 48% beyond 8 steps.</li>
+      <li>Voice latency benchmarks (&lt;300ms cascadeless architectures), OWASP LLM Top 10 (2026), lab roadmaps (test-time compute, computer use).</li>
+      <li>HCI / MIT Sloan studies (2025-26): hyper-empathic AI backfire (+35% anger); demographic preference surveys (Gen Z 78% pro-AI &lt;2min; 60+ 65% human-bypass in financial matters). ⚠ Flagged for verification — figures could not be traced to named papers.</li>
+      <li>Spain: Estatuto de los Trabajadores Art. 64.4 (Ley Rider), ERE case law (Lopesan, Domestika), Telefónica ERE 2024 (€380-455k/exit), III Convenio Contact Center (expires Dec-2026).</li>
+      <li>Latam: Colombia BPO ~790k jobs / free-trade-zone employment quotas (20% tax), Brazil PL 2338/2023, Mexico REPSE, Peru Ley 31814, Argentina deregulation.</li>
+      <li>DORA (EU financial sector) + ISO/IEC 42001 as procurement gate.</li>
+    </ul>
+  </details>
+  <p class="suave" style="font-family:var(--sans);font-size:12.5px;margin-top:12px">Working papers: all four deep-research outputs, four red-team outputs and this report's full revision history are archived in the project repository (research/, 13+ commits).</p>
+</section>
+</main>
+
+<footer>
+  <strong>Konecta 2030 — The BPO Countdown</strong> · v0.7 · July 2026<br>
+  Built with multi-model analysis (Claude Opus 4.8 · GPT 5.6 SOL · Gemini Deep Think).
+  Confidential working document for the Management Committee. Simulator baseline figures are public and editable.
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
