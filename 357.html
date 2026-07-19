@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>3 · 5 · 7 — Konecta 2030</title>
+<style>
+:root {
+  --tinta: #16182b; --tinta-suave: #4a4e69; --papel: #fbfaf7;
+  --linea: #e3e1da; --indigo: #3b2fbf; --indigo-suave: #eceafd;
+  --coral: #e0472e; --verde: #1d7a4f;
+  --serif: Charter, Georgia, 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: var(--serif); background: var(--papel); color: var(--tinta);
+  overflow: hidden; cursor: pointer; user-select: none;
+}
+.slide {
+  position: absolute; inset: 0; display: none;
+  align-items: center; justify-content: center; padding: 6vh 8vw;
+}
+.slide.on { display: flex; animation: entra .35s ease; }
+@keyframes entra { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.inner { max-width: 1000px; width: 100%; }
+
+.kicker {
+  font-family: var(--sans); font-size: clamp(12px, 1.3vw, 15px); text-transform: uppercase;
+  letter-spacing: .2em; color: var(--indigo); margin-bottom: 3vh; font-weight: 700;
+}
+.gigante { font-size: clamp(44px, 8vw, 110px); line-height: 1.04; letter-spacing: -.02em; }
+.statement { font-size: clamp(28px, 4vw, 52px); line-height: 1.28; letter-spacing: -.012em; }
+.statement em { font-style: italic; }
+.statement strong, .gigante strong { color: var(--indigo); }
+.sub {
+  font-family: var(--sans); font-size: clamp(15px, 1.8vw, 20px); color: var(--tinta-suave);
+  margin-top: 4vh; line-height: 1.55;
+}
+.sub strong { color: var(--tinta); }
+.redflag {
+  font-family: var(--sans); font-size: clamp(15px, 1.8vw, 20px); color: var(--coral);
+  margin-top: 4vh; line-height: 1.5;
+}
+.numarca {
+  font-family: var(--mono); font-size: clamp(14px, 1.5vw, 17px); color: var(--indigo);
+  letter-spacing: .18em; margin-bottom: 2.5vh;
+}
+.divisor .gigante { color: var(--tinta); }
+.divisor .resto { font-family: var(--sans); font-size: clamp(14px, 1.6vw, 18px); color: var(--tinta-suave); margin-top: 3vh; letter-spacing: .04em; }
+
+/* Cover & handoff */
+.portada .gigante span { display: block; }
+.portada .gigante .dim { color: #c9c7bd; }
+.handoff { background: var(--tinta); color: #fff; cursor: default; }
+.handoff .statement { color: #fff; font-size: clamp(26px, 3.6vw, 46px); }
+.btn {
+  display: inline-block; font: 700 clamp(16px, 1.8vw, 20px) var(--sans); color: #fff;
+  text-decoration: none; background: var(--indigo); padding: 16px 30px; border-radius: 999px;
+  margin-top: 5vh; cursor: pointer;
+}
+.btn:hover { background: #4f42e0; }
+
+/* HUD */
+#hud {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; pointer-events: none;
+}
+#barra { height: 3px; background: var(--indigo); width: 0%; transition: width .25s ease; }
+#pag {
+  position: fixed; bottom: 14px; right: 18px; font: 500 12px var(--mono);
+  color: var(--tinta-suave); letter-spacing: .1em;
+}
+.handoff ~ #hud #pag, body.dark #pag { color: #8f93b8; }
+#hint {
+  position: fixed; bottom: 12px; left: 18px; font: 500 11.5px var(--sans);
+  color: var(--tinta-suave); opacity: .75;
+}
+</style>
+</head>
+<body>
+
+<!-- 1 · COVER -->
+<section class="slide portada on"><div class="inner">
+  <div class="kicker">Konecta 2030 · The BPO Countdown — prelude to the simulator</div>
+  <h1 class="gigante"><span>Three ideas.</span><span>Five questions.</span><span class="dim">Seven trends.</span></h1>
+</div></section>
+
+<!-- 2 · DIVIDER IDEAS -->
+<section class="slide divisor"><div class="inner">
+  <h1 class="gigante">Three ideas.</h1>
+  <div class="resto">The three sentences to take home.</div>
+</div></section>
+
+<!-- 3-5 · IDEAS -->
+<section class="slide"><div class="inner">
+  <div class="numarca">IDEA 1 / 3</div>
+  <p class="statement">The unit of this business is changing. For twenty years the industry sold <em>hours of people</em>;
+  the market is starting to buy <em>resolved outcomes</em>.</p>
+  <p class="sub">What is being redistributed is not technology — it is <strong>pricing power</strong>.
+  Whoever prices the new unit defines the new market.</p>
+</div></section>
+
+<section class="slide"><div class="inner">
+  <div class="numarca">IDEA 2 / 3</div>
+  <p class="statement"><strong>Capability is not deployed reality.</strong> The models can already do far more
+  than enterprises actually run in production.</p>
+  <p class="sub">Everything valuable in the next four years happens inside that gap —
+  and that gap is exactly <strong>the width of the window</strong>.</p>
+</div></section>
+
+<section class="slide"><div class="inner">
+  <div class="numarca">IDEA 3 / 3</div>
+  <p class="statement">The scarce asset is not intelligence — it is <strong>the right to operate it</strong>.</p>
+  <p class="sub">AI answers are heading toward free; owning the risk, the compliance and the trust is not.
+  The business that survives sells <strong>accountability, with AI inside</strong>.</p>
+</div></section>
+
+<!-- 6 · DIVIDER QUESTIONS -->
+<section class="slide divisor"><div class="inner">
+  <h1 class="gigante">Five questions.</h1>
+  <div class="resto">Only this committee can answer them. We leave them written — each with where to look.</div>
+</div></section>
+
+<!-- 7-11 · QUESTIONS -->
+<section class="slide"><div class="inner">
+  <div class="numarca">QUESTION 1 / 5 · PRICING</div>
+  <p class="statement">In your next six renewals, who sets the price of an automated interaction —
+  you, or the client's procurement?</p>
+  <p class="sub"><strong>Where to look:</strong> per-resolution clauses and savings-sharing demands in the 2026-27 renewal pipeline.</p>
+</div></section>
+
+<section class="slide"><div class="inner">
+  <div class="numarca">QUESTION 2 / 5 · CLIENTS</div>
+  <p class="statement">Which of your top-10 clients already has an internal conversational-AI team —
+  and what will they still need you for in 2028?</p>
+  <p class="sub"><strong>Where to look:</strong> client job postings, QBR agendas, volumes quietly moving to self-service.</p>
+</div></section>
+
+<section class="slide"><div class="inner">
+  <div class="numarca">QUESTION 3 / 5 · PLATFORMS</div>
+  <p class="statement">When agents ship inside the licenses your clients already pay for,
+  what exactly do they still buy from Konecta?</p>
+  <p class="sub"><strong>Where to look:</strong> the share of contracts where Konecta owns orchestration and data — not just the labor.</p>
+</div></section>
+
+<section class="slide"><div class="inner">
+  <div class="numarca">QUESTION 4 / 5 · PEOPLE</div>
+  <p class="statement">Can natural attrition outrun the transition — and what happens to the people who stay,
+  handling only the hardest interactions?</p>
+  <p class="sub"><strong>Where to look:</strong> monthly attrition vs. the required reduction rate; pay, status and burnout in escalation teams.</p>
+</div></section>
+
+<section class="slide"><div class="inner">
+  <div class="numarca">QUESTION 5 / 5 · KOLIBRI</div>
+  <p class="statement">Is it a tool or a business — and would you sell it to someone who competes
+  with your own operations?</p>
+  <p class="sub"><strong>Where to look:</strong> the "Sell" pipeline, and whether Kolibri has a price list by Q1 2027.</p>
+</div></section>
+
+<!-- 12 · DIVIDER TRENDS -->
+<section class="slide divisor"><div class="inner">
+  <h1 class="gigante">Seven trends.</h1>
+  <div class="resto">Nobody controls them. Each one carries an observable red flag — when you see it, the report tells you what to do.</div>
+</div></section>
+
+<!-- 13-19 · TRENDS -->
+<section class="slide"><div class="inner">
+  <div class="numarca">TREND 1 / 7</div>
+  <p class="statement">Outcome pricing goes <strong>mainstream</strong>.</p>
+  <p class="sub">$1.25 per resolution is already public.</p>
+  <p class="redflag"><strong>Red flag:</strong> a top-10 client RFP admits per-resolution bids only.</p>
+</div></section>
+
+<section class="slide"><div class="inner">
+  <div class="numarca">TREND 2 / 7</div>
+  <p class="statement">Voice is getting <strong>solved</strong>.</p>
+  <p class="sub">&lt;300ms latency, natural interruptions, any accent.</p>
+  <p class="redflag"><strong>Red flag:</strong> a voice agent runs 1M+ retention calls/month at NPS parity.</p>
+</div></section>
+
+<section class="slide"><div class="inner">
+  <div class="numarca">TREND 3 / 7</div>
+  <p class="statement">Computer use dissolves the <strong>integration moat</strong>.</p>
+  <p class="sub">AI clicks through AS400/Citrix like a human — no APIs, no migration project.</p>
+  <p class="redflag"><strong>Red flag:</strong> a client deploys agents on legacy systems with no integration project.</p>
+</div></section>
+
+<section class="slide"><div class="inner">
+  <div class="numarca">TREND 4 / 7</div>
+  <p class="statement">Platforms bundle agents as <strong>loss leaders</strong>.</p>
+  <p class="sub">40% license discounts already seen.</p>
+  <p class="redflag"><strong>Red flag:</strong> automated interactions arrive "free" inside a major CCaaS renewal.</p>
+</div></section>
+
+<section class="slide"><div class="inner">
+  <div class="numarca">TREND 5 / 7</div>
+  <p class="statement">Customers start sending <strong>their own agents</strong>.</p>
+  <p class="sub">The contact center goes machine-to-machine.</p>
+  <p class="redflag"><strong>Red flag:</strong> &gt;2% of inbound identified as synthetic callers.</p>
+</div></section>
+
+<section class="slide"><div class="inner">
+  <div class="numarca">TREND 6 / 7</div>
+  <p class="statement">Regulation hardens into a <strong>moat</strong>.</p>
+  <p class="sub">AI Act, right-to-a-human, ISO 42001 in tenders.</p>
+  <p class="redflag"><strong>Red flag:</strong> the first Tier-1 RFP disqualifies non-certified vendors.</p>
+</div></section>
+
+<section class="slide"><div class="inner">
+  <div class="numarca">TREND 7 / 7</div>
+  <p class="statement">The human premium becomes a <strong>product</strong>.</p>
+  <p class="sub">Klarna re-hired; paid human tiers are coming.</p>
+  <p class="redflag"><strong>Red flag:</strong> a major brand charges extra for guaranteed human service.</p>
+</div></section>
+
+<!-- 20 · HANDOFF -->
+<section class="slide handoff"><div class="inner">
+  <p class="statement">Three ideas to argue with.<br>Five questions only this committee can answer.<br>
+  Seven trends nobody controls.<br><br><strong style="color:#fff">They collide in one place.</strong></p>
+  <a class="btn" id="btn-sim" href="index.html#simulador">Open the simulator →</a>
+</div></section>
+
+<div id="hud"><div id="barra"></div></div>
+<div id="pag">1 / 20</div>
+<div id="hint">← → · space · click</div>
+
+<script>
+(function () {
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  let i = 0;
+  function ir(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((s, k) => s.classList.toggle('on', k === i));
+    document.getElementById('barra').style.width = ((i + 1) / slides.length * 100) + '%';
+    document.getElementById('pag').textContent = (i + 1) + ' / ' + slides.length;
+    document.getElementById('pag').style.color = slides[i].classList.contains('handoff') ? '#8f93b8' : '';
+    location.hash = i + 1;
+  }
+  document.addEventListener('keydown', e => {
+    if (['ArrowRight', ' ', 'PageDown', 'Enter'].includes(e.key)) { e.preventDefault(); ir(i + 1); }
+    else if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); ir(i - 1); }
+    else if (e.key === 'Home') ir(0);
+    else if (e.key === 'End') ir(slides.length - 1);
+  });
+  document.addEventListener('click', e => {
+    if (e.target.closest('a')) return;           // the CTA navigates, never advances
+    ir(e.clientX < window.innerWidth * 0.2 ? i - 1 : i + 1);
+  });
+  // deep link: 357.html#12 opens slide 12
+  const h = parseInt(location.hash.slice(1), 10);
+  ir(isNaN(h) ? 0 : h - 1);
+})();
+</script>
+</body>
+</html>
