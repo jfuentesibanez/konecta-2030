@@ -291,6 +291,22 @@
     pintar();
   }
 
+  /* ---------------- Provenance tag tooltips ---------------- */
+  const leyenda = {
+    DR1: 'DR1 · Market & competition — deep research by GPT 5.6 SOL',
+    DR2: 'DR2 · Economics of disruption — deep research by GPT 5.6 SOL',
+    DR3: 'DR3 · Technology trajectory — deep research by Gemini Deep Think',
+    DR4: 'DR4 · Regulation & labor — deep research by Gemini Deep Think',
+    RT:  'RT · Changed or challenged by the cross-model red team (both models attacking the synthesis)'
+  };
+  $$('.tag.dr').forEach(t => {
+    const hits = Object.keys(leyenda).filter(k => new RegExp('\\b' + k + '\\b').test(t.textContent));
+    if (hits.length) t.title = hits.map(k => leyenda[k]).join('\n');
+  });
+  $$('.tag.dato').forEach(t => { t.title = 'FACT — verifiable public source'; });
+  $$('.tag.infer').forEach(t => { t.title = 'INFERENCE — derived from facts'; });
+  $$('.tag.hipo').forEach(t => { t.title = 'HYPOTHESIS — argued belief, open to challenge'; });
+
   /* ---------------- Navigation scrollspy ---------------- */
   const enlaces = $$('nav a[href^="#"]');
   const secciones = enlaces.map(a => $(a.getAttribute('href'))).filter(Boolean);
