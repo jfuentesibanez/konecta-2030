@@ -176,6 +176,28 @@ details.formulas pre {
 .esc.s3 { border-top: 5px solid var(--verde); } .esc.s3 .peso { color: var(--verde); }
 .esc.s4 { border-top: 5px solid var(--ambar); } .esc.s4 .peso { color: var(--ambar); }
 
+/* ---------- 3 ideas · 5 questions · 7 trends ---------- */
+.big357 { font-size: clamp(30px, 4.5vw, 44px); letter-spacing: -.015em; margin: 56px 0 10px; }
+.big357:first-of-type { margin-top: 24px; }
+.fila357 { display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px dashed var(--linea); }
+.fila357:last-of-type { border-bottom: none; }
+.n357 { font-family: var(--mono); color: var(--indigo); font-size: 15px; min-width: 26px; padding-top: 7px; }
+.fila357 .cuerpo { flex: 1; }
+.idea357 { font-size: clamp(20px, 2.4vw, 24px); line-height: 1.45; }
+.kick357 { font-family: var(--sans); font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--indigo); margin-bottom: 4px; font-weight: 700; }
+.q357 { font-size: 21px; line-height: 1.42; }
+.mirar357 { font-family: var(--sans); font-size: 13.5px; color: var(--tinta-suave); margin-top: 8px; }
+.mirar357 strong { color: var(--tinta); }
+.t357 { font-size: 20px; line-height: 1.4; }
+.redflag357 { font-family: var(--sans); font-size: 13.5px; color: var(--coral); margin-top: 6px; }
+.handoff357 { background: var(--tinta); color: #fff; border-radius: 14px; padding: 30px 32px; margin-top: 56px; }
+.handoff357 p { font-size: clamp(19px, 2.2vw, 23px); line-height: 1.5; margin: 0 0 18px; }
+.handoff357 a.btn357 {
+  display: inline-block; font: 700 15px var(--sans); color: #fff; text-decoration: none;
+  background: var(--indigo); padding: 12px 22px; border-radius: 999px;
+}
+.handoff357 a.btn357:hover { background: #4f42e0; }
+
 /* ---------- Tablas ---------- */
 table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: 14px; margin: 18px 0; }
 th { text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: .1em; color: var(--tinta-suave); padding: 10px 12px; border-bottom: 2px solid var(--tinta); }
