@@ -517,6 +517,96 @@ consequential, never precise. The per-account "board table"
     <p style="margin:0"><strong>4. Epistemic labeling</strong> — every figure is a <span class="tag dato">FACT</span> (verifiable public source),
     an <span class="tag infer">INFERENCE</span> (derived from facts) or a <span class="tag hipo">HYPOTHESIS</span> (argued belief). The simulator's model is open on this very page.</p>
   </div>
+  <h3>The consensus mechanism, drawn</h3>
+  <p class="suave" style="font-family:var(--sans);font-size:14px">How three frontier models produced one report without averaging away their disagreements:
+  independent research → one synthesis → adversarial attack → adjudication with three possible outcomes. Convergence is treated as signal, divergence as information, and every red-team claim was itself subject to verification.</p>
+  <div style="overflow-x:auto;margin:18px 0">
+  <svg viewBox="0 0 960 570" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:720px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#4a4e69"/>
+      </marker>
+      <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#e0472e"/>
+      </marker>
+    </defs>
+
+    <!-- Phase labels -->
+    <text x="120" y="28" text-anchor="middle" font-size="11" letter-spacing="2" fill="#8f93b8" font-weight="700">1 · INDEPENDENT RESEARCH</text>
+    <text x="425" y="28" text-anchor="middle" font-size="11" letter-spacing="2" fill="#8f93b8" font-weight="700">2 · SYNTHESIS</text>
+    <text x="785" y="28" text-anchor="middle" font-size="11" letter-spacing="2" fill="#8f93b8" font-weight="700">3 · ADVERSARIAL PASS</text>
+
+    <!-- GPT box -->
+    <rect x="20" y="48" width="200" height="118" rx="10" fill="#ffffff" stroke="#e3e1da"/>
+    <text x="36" y="74" font-size="14" font-weight="700" fill="#16182b">GPT 5.6 SOL</text>
+    <text x="36" y="96" font-size="12" fill="#4a4e69">DR1 · Market &amp; competition</text>
+    <text x="36" y="114" font-size="12" fill="#4a4e69">DR2 · Economics of disruption</text>
+    <text x="36" y="148" font-size="10.5" fill="#8f93b8">deep research · sees no other model</text>
+
+    <!-- Gemini box -->
+    <rect x="20" y="196" width="200" height="118" rx="10" fill="#ffffff" stroke="#e3e1da"/>
+    <text x="36" y="222" font-size="14" font-weight="700" fill="#16182b">Gemini Deep Think</text>
+    <text x="36" y="244" font-size="12" fill="#4a4e69">DR3 · Technology trajectory</text>
+    <text x="36" y="262" font-size="12" fill="#4a4e69">DR4 · Regulation &amp; labor</text>
+    <text x="36" y="296" font-size="10.5" fill="#8f93b8">deep research · sees no other model</text>
+
+    <!-- arrows research -> synthesis -->
+    <path d="M220,107 C260,107 270,150 305,165" fill="none" stroke="#4a4e69" stroke-width="1.5" marker-end="url(#arr)"/>
+    <path d="M220,255 C260,255 270,215 305,196" fill="none" stroke="#4a4e69" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- Synthesis box -->
+    <rect x="310" y="120" width="230" height="150" rx="10" fill="#eceafd" stroke="#3b2fbf"/>
+    <text x="326" y="148" font-size="14" font-weight="700" fill="#3b2fbf">Claude Fable 5</text>
+    <text x="326" y="168" font-size="12" fill="#16182b">Consolidates all four streams:</text>
+    <text x="326" y="186" font-size="12" fill="#4a4e69">scenarios · simulator · forecasts</text>
+    <text x="326" y="204" font-size="12" fill="#4a4e69">every figure labeled</text>
+    <text x="326" y="222" font-size="11" fill="#4a4e69">FACT / INFERENCE / HYPOTHESIS</text>
+    <text x="326" y="252" font-size="10.5" fill="#8f93b8">draft v0.1 → v0.5</text>
+
+    <!-- arrow synthesis -> red team -->
+    <path d="M540,165 C580,150 590,120 620,105" fill="none" stroke="#4a4e69" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- Red team box -->
+    <rect x="625" y="48" width="315" height="130" rx="10" fill="#fff6f4" stroke="#e0472e"/>
+    <text x="641" y="74" font-size="14" font-weight="700" fill="#e0472e">Red team ×4 — both models attack</text>
+    <text x="641" y="96" font-size="12" fill="#4a4e69">RT1 · scenarios, weights, forecasts (×2)</text>
+    <text x="641" y="114" font-size="12" fill="#4a4e69">RT2 · simulator engine audit (×2)</text>
+    <text x="641" y="140" font-size="11.5" font-weight="700" fill="#16182b">★ Both independently found the same gap:</text>
+    <text x="641" y="158" font-size="11.5" fill="#16182b">S4 Platform Capture — convergence = signal</text>
+
+    <!-- arrow red team -> adjudication -->
+    <path d="M785,178 L785,212" fill="none" stroke="#e0472e" stroke-width="1.5" marker-end="url(#arrR)"/>
+
+    <!-- Adjudication box -->
+    <rect x="625" y="218" width="315" height="196" rx="10" fill="#ffffff" stroke="#e3e1da"/>
+    <text x="641" y="244" font-size="14" font-weight="700" fill="#16182b">Adjudication — Fable 5 + verification</text>
+    <text x="641" y="262" font-size="10.5" fill="#8f93b8">every red-team claim fact-checked (e.g. Spanish law status)</text>
+    <rect x="641" y="276" width="283" height="36" rx="7" fill="#e2efe7"/>
+    <text x="653" y="291" font-size="11.5" font-weight="700" fill="#1d7a4f">ACCEPT</text>
+    <text x="653" y="305" font-size="10.5" fill="#1d7a4f">S4 added · engine hardened ×2 · F3/F4 redefined</text>
+    <rect x="641" y="320" width="283" height="36" rx="7" fill="#fdf1dc"/>
+    <text x="653" y="335" font-size="11.5" font-weight="700" fill="#b26a00">REBUT — with evidence, documented</text>
+    <text x="653" y="349" font-size="10.5" fill="#b26a00">oversight indexing · fric "hack" · law not yet in force</text>
+    <rect x="641" y="364" width="283" height="36" rx="7" fill="#fde5e0"/>
+    <text x="653" y="379" font-size="11.5" font-weight="700" fill="#e0472e">PRESERVE DIVERGENCE — never average</text>
+    <text x="653" y="393" font-size="10.5" fill="#e0472e">F2 price deflation: 30% vs 90% — highest-info signal</text>
+
+    <!-- arrow adjudication -> output -->
+    <path d="M785,414 L785,448" fill="none" stroke="#4a4e69" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- Output bar -->
+    <rect x="310" y="452" width="630" height="66" rx="10" fill="#16182b"/>
+    <text x="330" y="479" font-size="13.5" font-weight="700" fill="#ffffff">Report v0.7 — 4 scenarios · calibrated forecasts · hardened engine</text>
+    <text x="330" y="500" font-size="11.5" fill="#b9bcd6">weight votes shown per model (GPT 40/30/10/20 · Gemini 50/15/15/20 · synthesis 35/30/15/20)</text>
+
+    <!-- quarterly loop -->
+    <path d="M310,485 C180,485 120,420 120,340 L120,330" fill="none" stroke="#8f93b8" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+    <text x="60" y="428" font-size="10.5" fill="#8f93b8">13 signals →</text>
+    <text x="60" y="443" font-size="10.5" fill="#8f93b8">quarterly</text>
+    <text x="60" y="458" font-size="10.5" fill="#8f93b8">recalibration</text>
+  </svg>
+  </div>
+
   <h3>Update criteria</h3>
   <p class="suave" style="font-family:var(--sans);font-size:15px">This document expires. It must be recalibrated: (a) quarterly against the signals in section 06;
   (b) upon any discontinuous jump in frontier-model capabilities; (c) upon material regulatory changes in the EU or Latam;
