@@ -122,7 +122,10 @@ p { margin-bottom: 16px; }
 .dash-metric .dm-l { font-size: 11.5px; color: #8f93b8; }
 .dash-bar { height: 5px; background: #34375a; border-radius: 3px; margin-top: 5px; overflow: hidden; }
 .dash-bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--indigo), #7f6cf0); border-radius: 3px; transition: width .8s cubic-bezier(.2,.8,.2,1); }
-.bifurcacion { border-left: 4px solid var(--coral); background: #fff6f4; }
+.bifurcacion {
+  border-left: 4px solid var(--coral); background: #fff6f4;
+  padding-left: 26px; padding-right: 26px; border-radius: 0 12px 12px 0;
+}
 
 /* ---------- Simulador ---------- */
 #simulador { max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
@@ -182,6 +185,20 @@ details.formulas pre {
 }
 @media (max-width: 560px) {
   .esc-grid { grid-template-columns: 1fr; }
+}
+/* footnote under the scenario grid: aligned to the breakout width, clearly marked as a note */
+.nota-votos {
+  width: min(1200px, calc(100vw - 48px));
+  margin: 18px 0 0 50%; transform: translateX(-50%);
+  padding-top: 12px; border-top: 1px solid var(--linea);
+  font-family: var(--sans); font-size: 13px; color: var(--tinta-suave); line-height: 1.6;
+}
+.nota-votos::before {
+  content: 'METHOD NOTE · WEIGHT VOTES'; display: block;
+  font: 700 10px var(--sans); letter-spacing: .14em; color: var(--indigo); margin-bottom: 6px;
+}
+@media (max-width: 1020px) {
+  .nota-votos { width: auto; margin-left: 0; transform: none; }
 }
 .esc { border-radius: 14px; border: 1px solid var(--linea); background: var(--papel-alto); padding: 22px; font-family: var(--sans); }
 .esc .peso { font-size: 34px; font-weight: 800; letter-spacing: -.02em; }
