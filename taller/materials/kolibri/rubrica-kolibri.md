@@ -1,4 +1,4 @@
-[FICTIONAL — workshop material]
+[FICTIONAL - workshop material]
 # Kolibri draft evaluation rubric (0-10 per criterion)
 1. Clear, descriptive use-case title
 2. Owner and department identified

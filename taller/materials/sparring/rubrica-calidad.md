@@ -1,4 +1,4 @@
-[FICTIONAL — workshop material]
+[FICTIONAL - workshop material]
 # Response evaluation rubric (0-10 per criterion)
 1. Genuine emotional acknowledgement in the first 30 seconds (no scripted phrases)
 2. Correct summary of the problem using the customer's own facts (proves listening)

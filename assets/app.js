@@ -1,6 +1,6 @@
 /* ============================================================
-   Konecta 2030 — simulator engine + site interaction
-   v0.2 — formulas provisional; ✓DR3-calibrated where noted,
+   Konecta 2030 - simulator engine + site interaction
+   v0.2 - formulas provisional; ✓DR3-calibrated where noted,
    pending recalibration with DR1/DR2/DR4.
    ============================================================ */
 (function () {
@@ -18,47 +18,47 @@
   function modelo(p, b) {
     const S = K30.supuestos;
     // 1. Human-equivalent interaction business volume in 2030
-    //    (unit: €M valued at 2024 human prices — an explicit value-equivalent, not a headcount of interactions)
+    //    (unit: €M valued at 2024 human prices - an explicit value-equivalent, not a headcount of interactions)
     const volInter24 = b.ingresos2024 * (b.mixVoz + b.mixDigital) / 100;
-    //    Jevons effect (RT2-Gemini): cheaper interactions expand demand — new micro-interactions appear
+    //    Jevons effect (RT2-Gemini): cheaper interactions expand demand - new micro-interactions appear
     const jevons = Math.max(0.9, 1 + 0.01 * (p.defl - 8));
     const volInter30 = volInter24 * Math.pow(1 + S.crecimientoSector / 100, 6) * jevons;
 
-    // 2. Effective AI penetration (friction delays the curve — coefficient raised per RT2 audit)
+    // 2. Effective AI penetration (friction delays the curve - coefficient raised per RT2 audit)
     const penEff = (p.pen / 100) * (1 - 0.45 * (p.fric / 100));
 
     // 3. What remains human in 2030
     const volHumano = volInter30 * (1 - penEff);
-    //    Konecta retains more human volume if it moved early — coupling attenuated per RT2 (was 0.60+0.40)
+    //    Konecta retains more human volume if it moved early - coupling attenuated per RT2 (was 0.60+0.40)
     const retencion = 0.65 + 0.25 * (p.cani / 100);
     const volHumanoK = volHumano * retencion;
-    //    Premium: downward-sloping demand per RT2 — higher premium shrinks the buying share
+    //    Premium: downward-sloping demand per RT2 - higher premium shrinks the buying share
     const sharePremium = Math.max(0.08, 0.25 / Math.sqrt(1 + p.prima / 100));
     const ingHumPremium = volHumanoK * sharePremium * (1 + p.prima / 100);
     //    Legacy repricing (RT2-Gemini): the deeper AI deflation runs, the harder clients renegotiate human rates
     const legacy = Math.max(0.60, 0.95 - 0.012 * p.defl);
     const ingHumBase = volHumanoK * (1 - sharePremium) * legacy;
 
-    // 4. The automated volume: who captures it — capture decoupled/attenuated per RT2 (was 0.12+0.60)
+    // 4. The automated volume: who captures it - capture decoupled/attenuated per RT2 (was 0.12+0.60)
     const volAuto = volInter30 * penEff;
     const volAutoDisponible = volAuto * (1 - p.inter / 100);      // not lost to in-house/platform agents
     const capturaK = 0.10 + 0.45 * (p.cani / 100);                 // Konecta's share of AI volume
     const volAutoK = volAutoDisponible * capturaK;
     const ingIA = volAutoK / p.defl * (1 + 0.35);                  // + platform/orchestration/data ARPU
 
-    // 5. New businesses (Kolibri as product, consulting, agentic back-office) — growth coupling attenuated per RT2
+    // 5. New businesses (Kolibri as product, consulting, agentic back-office) - growth coupling attenuated per RT2
     const ingNuevos = b.ingresos2024 * (b.mixIA + b.mixConsultoria) / 100
       * Math.pow(1 + (0.08 + 0.14 * (p.cani / 100)), 6);
 
     const ingresos2030 = ingHumBase + ingHumPremium + ingIA + ingNuevos;
 
-    // 6. Workforce (computed before EBITDA — severance depends on it)
+    // 6. Workforce (computed before EBITDA - severance depends on it)
     const ftePorMe = b.empleados / volInter24;                     // FTEs per human €M-equivalent (2024)
     const fteHumanos = volHumanoK * ftePorMe * 0.93;               // copilot productivity
-    //    Oversight is indexed to CAPTURED automated volume — lose the account, lose the oversight jobs too
+    //    Oversight is indexed to CAPTURED automated volume - lose the account, lose the oversight jobs too
     const fteCargaAuto = volAutoK * ftePorMe;                      // workload-equivalent of captured AI volume
     const fteSupervision = fteCargaAuto / K30.supuestos.botsPorSupervisor * K30.supuestos.factorQA;
-    const fteTecnologia = (ingIA + ingNuevos) / 0.15;              // 1 FTE per €150k — blended architects + offshore AI ops (RT2-Gemini: 0.28 was SaaS-grade)
+    const fteTecnologia = (ingIA + ingNuevos) / 0.15;              // 1 FTE per €150k - blended architects + offshore AI ops (RT2-Gemini: 0.28 was SaaS-grade)
     const plantilla2030 = fteHumanos + fteSupervision + fteTecnologia;
 
     // 7. EBITDA from margin mix, MINUS transition frictions (RT2 audits):
@@ -75,7 +75,7 @@
       + (ingIA + ingNuevos) * S.margenIA / 100
       - dragMigracion - dragEstructura - dragSeverance;
 
-    // 8. Katalyst 2028 — J-curve weighting (RT2-Gemini): price pressure front-loads, AI revenue back-loads
+    // 8. Katalyst 2028 - J-curve weighting (RT2-Gemini): price pressure front-loads, AI revenue back-loads
     const ingresos2028 = b.ingresos2024 + (ingresos2030 - b.ingresos2024) * 0.5;
 
     return {
@@ -89,7 +89,7 @@
   /* Value of the window: cumulative 2026-2030 EBITDA lost if the decision
      to cannibalize arrives ~1 year late (cani floored at 0).
      ×2.5 = sum of a linear ramp of the annual gap over 2026-30
-     (0 + 0.25 + 0.5 + 0.75 + 1.0) — plain arithmetic, replacing the
+     (0 + 0.25 + 0.5 + 0.75 + 1.0) - plain arithmetic, replacing the
      narrative 3.2 scalar flagged by the RT2 audit. */
   function ventana(p, b) {
     const ahora = modelo(p, b).ebitda2030;
@@ -212,7 +212,7 @@
       const k = $('#katalyst');
       const gap = r.ingresos2028 - 2500;
       k.innerHTML = '<strong>Katalyst 2028 check:</strong> this configuration projects <strong>' +
-        fmtM(r.ingresos2028) + '</strong> in 2028 — ' +
+        fmtM(r.ingresos2028) + '</strong> in 2028 - ' +
         (gap >= 0
           ? '<span style="color:var(--verde)">€2.5B target reached (+€' + Math.round(gap) + 'M)</span>'
           : '<span style="color:var(--coral)">€' + Math.round(-gap) + 'M short of the €2.5B target</span>');
@@ -293,19 +293,19 @@
 
   /* ---------------- Provenance tag tooltips ---------------- */
   const leyenda = {
-    DR1: 'DR1 · Market & competition — deep research by GPT 5.6 SOL',
-    DR2: 'DR2 · Economics of disruption — deep research by GPT 5.6 SOL',
-    DR3: 'DR3 · Technology trajectory — deep research by Gemini Deep Think',
-    DR4: 'DR4 · Regulation & labor — deep research by Gemini Deep Think',
+    DR1: 'DR1 · Market & competition - deep research by GPT 5.6 SOL',
+    DR2: 'DR2 · Economics of disruption - deep research by GPT 5.6 SOL',
+    DR3: 'DR3 · Technology trajectory - deep research by Gemini Deep Think',
+    DR4: 'DR4 · Regulation & labor - deep research by Gemini Deep Think',
     RT:  'RT · Changed or challenged by the cross-model red team (both models attacking the synthesis)'
   };
   $$('.tag.dr').forEach(t => {
     const hits = Object.keys(leyenda).filter(k => new RegExp('\\b' + k + '\\b').test(t.textContent));
     if (hits.length) t.title = hits.map(k => leyenda[k]).join('\n');
   });
-  $$('.tag.dato').forEach(t => { t.title = 'FACT — verifiable public source'; });
-  $$('.tag.infer').forEach(t => { t.title = 'INFERENCE — derived from facts'; });
-  $$('.tag.hipo').forEach(t => { t.title = 'HYPOTHESIS — argued belief, open to challenge'; });
+  $$('.tag.dato').forEach(t => { t.title = 'FACT - verifiable public source'; });
+  $$('.tag.infer').forEach(t => { t.title = 'INFERENCE - derived from facts'; });
+  $$('.tag.hipo').forEach(t => { t.title = 'HYPOTHESIS - argued belief, open to challenge'; });
 
   /* ---------------- Navigation scrollspy ---------------- */
   const enlaces = $$('nav a[href^="#"]');

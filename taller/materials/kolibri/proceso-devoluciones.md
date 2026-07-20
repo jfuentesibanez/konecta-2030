@@ -1,4 +1,4 @@
-[FICTIONAL — workshop material]
+[FICTIONAL - workshop material]
 # Process: online order returns management (fictional retail client "ModaExpress")
 Volume: ~45,000 cases/month, 60% chat, 40% email. Current team: 38 agents.
 Current flow: (1) customer contacts with order number; (2) agent verifies the purchase in the order system
