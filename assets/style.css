@@ -82,6 +82,11 @@ p { margin-bottom: 16px; }
 .tag.infer { background: #fdf1dc; color: var(--ambar); }
 .tag.hipo { background: #fde5e0; color: var(--coral); }
 .tag.dr { background: var(--indigo-suave); color: var(--indigo); }
+/* long provenance annotations (forecast criteria, timeline notes) must wrap, never overflow */
+.crit .tag, .pron-body .tag, .fase .tag {
+  white-space: normal; display: inline-block; line-height: 1.6;
+  text-align: left; margin-top: 4px; padding: 3px 8px;
+}
 
 /* ---------- Tarjetas y cajas ---------- */
 .caja {
