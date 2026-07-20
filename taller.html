@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Taller · Construye tu primer agente — Konecta LT</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.paso { display: flex; gap: 18px; margin: 26px 0; }
+.paso .pn {
+  font-family: var(--mono); background: var(--indigo); color: #fff; border-radius: 50%;
+  width: 34px; height: 34px; min-width: 34px; display: flex; align-items: center; justify-content: center;
+  font-size: 15px; font-weight: 700;
+}
+.paso h4 { font-family: var(--sans); font-size: 16px; margin-bottom: 6px; }
+.prompt-box {
+  background: var(--tinta); color: #d8dbef; border-radius: 10px; padding: 16px 18px;
+  font: 13.5px/1.65 var(--mono); margin: 10px 0; white-space: pre-wrap; position: relative;
+}
+.prompt-box::before {
+  content: 'COPIAR Y PEGAR EN COWORK'; position: absolute; top: -9px; left: 14px;
+  font: 700 9.5px var(--sans); letter-spacing: .12em; background: var(--indigo);
+  color: #fff; padding: 2px 8px; border-radius: 4px;
+}
+.ej { border: 1px solid var(--linea); border-radius: 12px; padding: 20px 22px; margin: 14px 0; background: var(--papel-alto); }
+.ej h4 { font-family: var(--sans); font-size: 16px; }
+.ej .dif { font-family: var(--sans); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; vertical-align: 2px; }
+.d1 { background: #e2efe7; color: var(--verde); } .d2 { background: #fdf1dc; color: var(--ambar); } .d3 { background: #fde5e0; color: var(--coral); }
+.regla { border-left: 4px solid var(--coral); background: #fff6f4; }
+.tiempo { font-family: var(--mono); color: var(--indigo); font-size: 13px; letter-spacing: .08em; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-brand">TALLER · KONECTA LT</span>
+    <a href="#mision">La misión</a>
+    <a href="#anatomia">Anatomía</a>
+    <a href="#ideacion">Ideación</a>
+    <a href="#construccion">Construcción</a>
+    <a href="#loop">El loop</a>
+    <a href="#demo-day">Demo day</a>
+    <a href="#sos">SOS</a>
+  </div>
+</nav>
+
+<main>
+<section id="mision" style="padding-top:48px">
+  <div class="kicker">Taller práctico · Claude Cowork · grupos de 2-3 · 21-jul-2026</div>
+  <h1 style="font-size:clamp(34px,5vw,54px)">Construye tu primer agente</h1>
+  <p class="destacado" style="margin-top:20px">En los próximos 110 minutos vuestro equipo va a pasar de
+  <em>chatear con una IA</em> a <em>dirigir un agente</em>: darle un objetivo, materiales y un criterio de éxito —
+  y verle trabajar en bucle hasta conseguirlo.</p>
+  <div class="caja regla">
+    <h4>Las 3 reglas del taller</h4>
+    <p style="margin:0"><strong>1.</strong> Nada de datos reales de clientes ni información confidencial — todos los materiales están en la carpeta <code>materiales/</code> y son ficticios.<br>
+    <strong>2.</strong> No busquéis el agente perfecto: buscad el prototipo que enseñe algo en el demo day.<br>
+    <strong>3.</strong> Si os atascáis más de 3 minutos, mano arriba — para eso está el facilitador.</p>
+  </div>
+</section>
+
+<section id="anatomia">
+  <span class="num">01</span>
+  <h2>Anatomía de un agente <span class="tiempo">· lo veréis en la demo (15 min)</span></h2>
+  <p>Un chat responde preguntas. Un agente <strong>persigue un objetivo</strong>. La diferencia son cuatro piezas —
+  las mismas cuatro que vais a montar hoy:</p>
+  <table>
+    <thead><tr><th>Pieza</th><th>Qué es</th><th>En Cowork</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Objetivo</strong></td><td>Qué debe conseguir, en una frase medible</td><td>La primera línea de vuestro encargo</td></tr>
+      <tr><td><strong>Contexto</strong></td><td>Los materiales con los que trabaja</td><td>La carpeta que le dais (docs, CSVs, notas)</td></tr>
+      <tr><td><strong>Herramientas</strong></td><td>Lo que puede hacer: leer, escribir archivos, crear documentos</td><td>Cowork las trae de serie</td></tr>
+      <tr><td><strong>El loop</strong></td><td>Trabaja → se autoevalúa contra el criterio de éxito → corrige → repite</td><td>Se lo pedís en el encargo (paso 3)</td></tr>
+    </tbody>
+  </table>
+  <p class="suave" style="font-family:var(--sans);font-size:14px">La pieza que separa un juguete de una herramienta es la cuarta:
+  un agente sin criterio de éxito no sabe cuándo ha terminado — ni cuándo lo está haciendo mal.</p>
+</section>
+
+<section id="ideacion">
+  <span class="num">02</span>
+  <h2>Ideación <span class="tiempo">· 20 min</span></h2>
+  <p>Elegid <strong>un</strong> ejercicio del menú (o proponed el vuestro — regla 1 aplica). Antes de tocar el teclado,
+  rellenad esta ficha en papel — 5 minutos, las cuatro piezas:</p>
+  <div class="caja">
+    <p style="font-family:var(--mono);font-size:14px;line-height:2;margin:0">
+    OBJETIVO (1 frase): ______________________________________________<br>
+    MATERIALES que le damos: ________________________________________<br>
+    ENTREGABLE que produce: _________________________________________<br>
+    CRITERIO DE ÉXITO — ¿cómo sabrá que lo ha conseguido?: __________</p>
+  </div>
+
+  <h3>El menú</h3>
+  <div class="ej"><h4>A · El radar competitivo <span class="dif d1">Suave</span></h4>
+    <p style="font-size:15px;margin:0">Le dais 5 notas de prensa del sector (en <code>materiales/radar/</code>) y produce un briefing de una página:
+    las 3 amenazas más relevantes para Konecta, por qué, y qué señal vigilar de cada una. <strong>Loop:</strong> se autoevalúa — ¿cada amenaza tiene evidencia citada y señal accionable? — y mejora hasta cumplirlo.</p></div>
+  <div class="ej"><h4>B · El analista de QBR <span class="dif d1">Suave</span></h4>
+    <p style="font-size:15px;margin:0">Le dais la transcripción de una reunión con un cliente (ficticia, en <code>materiales/qbr/</code>) y produce: riesgos de churn detectados,
+    compromisos adquiridos con responsable, y el borrador de email de seguimiento. <strong>Loop:</strong> checklist de 5 puntos que debe cubrir; revisa y corrige hasta marcarlos todos.</p></div>
+  <div class="ej"><h4>C · El preparador de casos Kolibri <span class="dif d2">Media</span></h4>
+    <p style="font-size:15px;margin:0">Le dais la descripción de un proceso operativo (en <code>materiales/kolibri/</code>) y rellena el borrador de los 11 pasos del wizard de Kolibri
+    (Basics → Owner → Problem → Impact → Data → Solution → Interface → Security → Readiness → Timeline → Review), decidiendo si el caso es determinista, agéntico o híbrido.
+    <strong>Loop:</strong> se puntúa contra la rúbrica incluida (10 criterios) y mejora hasta sacar ≥8/10. <em>Lo que salga de aquí puede entrar de verdad en Kolibri mañana.</em></p></div>
+  <div class="ej"><h4>D · El vigía de señales <span class="dif d2">Media</span></h4>
+    <p style="font-size:15px;margin:0">Le dais las 13 señales del informe Konecta 2030 (CSV) y un paquete de "noticias del trimestre" (ficticias). Decide qué umbrales se han cruzado
+    y redacta la nota al comité: qué señales dispararon, qué pesos de escenario se mueven y qué acción pactada toca ejecutar. <strong>Loop:</strong> verifica que cada conclusión cita su noticia y su umbral — si no, la descarta y sigue.</p></div>
+  <div class="ej"><h4>E · El sparring de cliente difícil <span class="dif d3">Atrevida</span></h4>
+    <p style="font-size:15px;margin:0">Montáis un agente que interpreta a un cliente enfadado (guion de situación en <code>materiales/sparring/</code>) para entrenar respuestas del equipo,
+    y que después evalúa la conversación contra una rúbrica de calidad de Konecta. <strong>Loop:</strong> el propio agente sube la dificultad si la respuesta fue buena, y la baja si no. El más divertido de demostrar en el demo day.</p></div>
+</section>
+
+<section id="construccion">
+  <span class="num">03</span>
+  <h2>Construcción <span class="tiempo">· 75 min · 3 fases</span></h2>
+
+  <div class="paso"><div class="pn">1</div><div>
+    <h4>Fase 1 · El encargo (15 min) — el agente nace</h4>
+    <p style="font-size:15px">Abrid Cowork (ya está instalado y conectado a vuestra carpeta de equipo). Escribid vuestro encargo con esta plantilla — sustituid los corchetes con vuestra ficha:</p>
+    <div class="prompt-box">Eres nuestro agente de [NOMBRE DEL AGENTE].
+
+OBJETIVO: [vuestra frase medible].
+
+MATERIALES: trabaja únicamente con los archivos de la carpeta
+[materiales/X]. No inventes datos: si algo no está en los
+archivos, dilo explícitamente.
+
+ENTREGABLE: [qué produce y en qué formato — ej. un documento
+briefing.md de máximo 1 página].
+
+Empieza: lee los materiales, dime en 5 líneas qué has entendido
+y cuál es tu plan antes de ejecutarlo.</div>
+    <p class="suave" style="font-family:var(--sans);font-size:13.5px">⚠ No paséis de fase hasta que el plan que os proponga tenga sentido. Corregidle en lenguaje natural — es vuestro empleado nuevo, no un oráculo.</p>
+  </div></div>
+
+  <div class="paso"><div class="pn">2</div><div>
+    <h4>Fase 2 · La primera ejecución (20 min) — el agente trabaja</h4>
+    <p style="font-size:15px">Dadle luz verde. Ved cómo lee los archivos, razona y escribe el entregable en vuestra carpeta. Cuando termine, haced las dos preguntas de control de calidad de todo buen jefe:</p>
+    <div class="prompt-box">1. ¿Qué parte de tu entregable tiene menos respaldo en los
+   materiales? Sé honesto.
+2. ¿Qué te faltó para hacerlo mejor?</div>
+    <p class="suave" style="font-family:var(--sans);font-size:13.5px">Esto ya es más de lo que hace el 95% de los usuarios de IA: pedir autocrítica antes de fiarse.</p>
+  </div></div>
+
+  <div class="paso"><div class="pn">3</div><div>
+    <h4>Fase 3 · El loop (30 min) — el agente se dirige solo <span class="tag dr" style="vertical-align:3px">la pieza estrella</span></h4>
+    <p style="font-size:15px">Ahora convertidlo en un agente de verdad: dadle el criterio de éxito y que itere él solo hasta cumplirlo.</p>
+    <div class="prompt-box">A partir de ahora trabajas en bucle hasta cumplir este CRITERIO
+DE ÉXITO: [vuestro criterio — ej. "las 3 amenazas tienen evidencia
+citada de los materiales y una señal vigilable cada una"].
+
+El bucle: (1) evalúa tu entregable actual contra el criterio,
+punto por punto, con nota 0-10; (2) si algo baja de 8, corrígelo
+y vuelve a evaluar; (3) repite hasta que todo esté en 8 o más,
+o hasta 3 rondas. Al final, enséñame la tabla de evaluación de
+cada ronda para que veamos cómo has mejorado.</div>
+    <p style="font-size:15px">Ved el bucle en marcha: evaluación → corrección → re-evaluación. <strong>Eso que estáis viendo — un sistema que persigue un objetivo y se corrige — es la tecnología que protagoniza la proyección 2030 que viene después del taller.</strong></p>
+    <p class="suave" style="font-family:var(--sans);font-size:13.5px">¿Vais sobrados? Extra: pedidle que proponga 3 mejoras a su propio encargo (el prompt de la Fase 1) y quedaos la mejor. Acabáis de hacer meta-optimización de agentes.</p>
+  </div></div>
+</section>
+
+<section id="loop">
+  <span class="num">04</span>
+  <h2>Por qué el loop importa</h2>
+  <p class="destacado">Un LLM responde. Un agente <em>persigue</em>. La diferencia no es inteligencia — es arquitectura:
+  objetivo + autoevaluación + iteración.</p>
+  <p>Todo lo que veréis en la proyección 2030 — agentes que resuelven interacciones de extremo a extremo, que se supervisan
+  entre sí, que negocian con otros agentes — es este mismo bucle que acabáis de montar, con más ceros en el presupuesto.
+  Cuando el informe hable de "1 supervisor humano por cada 22 agentes IA", ya sabréis exactamente qué está supervisando:
+  las tablas de evaluación de miles de bucles como el vuestro.</p>
+</section>
+
+<section id="demo-day">
+  <span class="num">05</span>
+  <h2>Demo day <span class="tiempo">· 30 min · ~5 min por equipo</span></h2>
+  <p>Formato fijo, cronometrado, sin diapositivas:</p>
+  <table>
+    <thead><tr><th>Min</th><th>Qué contáis</th></tr></thead>
+    <tbody>
+      <tr><td>0-1</td><td><strong>La ficha</strong>: objetivo, materiales, entregable, criterio de éxito.</td></tr>
+      <tr><td>1-3</td><td><strong>Demo en vivo</strong>: enseñad el loop — la tabla de evaluación mejorando entre rondas vale más que el entregable.</td></tr>
+      <tr><td>3-4</td><td><strong>La confesión</strong>: qué NO ha funcionado o qué os ha sorprendido. (Obligatorio — aquí está la mitad del aprendizaje.)</td></tr>
+      <tr><td>4-5</td><td><strong>El puente</strong>: si esto fuera real en Konecta, ¿qué proceso tocaría y quién sería su owner? → candidato directo al wizard de Kolibri.</td></tr>
+    </tbody>
+  </table>
+  <div class="caja nota"><h4>El cierre del taller</h4>
+  <p style="margin:0">Cada "puente" de cada equipo se apunta. Mañana, los que valgan entran en Kolibri por el wizard de 11 pasos —
+  el mismo que uno de los equipos ha estado rellenando con su agente. El taller no acaba en el demo day: acaba en el pipeline.</p></div>
+</section>
+
+<section id="sos" style="border-bottom:none">
+  <span class="num">06</span>
+  <h2>SOS — atascos típicos y salida rápida</h2>
+  <table>
+    <thead><tr><th>Síntoma</th><th>Salida</th></tr></thead>
+    <tbody>
+      <tr><td>"No encuentra los archivos"</td><td>Verificad que Cowork está apuntando a la carpeta del equipo (se ve en la propia ventana). Si no: decidle la ruta exacta de la carpeta en el chat.</td></tr>
+      <tr><td>"Se ha inventado un dato"</td><td>Es la regla de oro: <em>"eso no está en los materiales — vuelve a los archivos y cita de dónde sale cada afirmación"</em>. Ver al agente rectificar es parte del taller.</td></tr>
+      <tr><td>"El entregable es genérico, de folleto"</td><td>Falta criterio de éxito exigente. Añadid: "prohibidas las frases que podría firmar cualquier empresa — cada punto debe citar un dato concreto de los materiales".</td></tr>
+      <tr><td>"El loop no converge / da vueltas"</td><td>El criterio es ambiguo. Reescribidlo como checklist binaria: se cumple o no se cumple. Máximo 3 rondas y a demo.</td></tr>
+      <tr><td>"Queremos meter datos reales"</td><td>No. Regla 1. Los dummy están diseñados para que el resultado sea igual de demostrativo.</td></tr>
+      <tr><td>Cualquier otra cosa</td><td>Mano arriba. Facilitador + soporte IT en sala.</td></tr>
+    </tbody>
+  </table>
+</section>
+</main>
+
+<footer>
+  <strong>Taller · Construye tu primer agente</strong> · Konecta Leadership Team · 21-jul-2026<br>
+  Herramienta: Claude Cowork (Anthropic) · Materiales ficticios en <code>materiales/</code> · A continuación: la proyección Konecta 2030.
+</footer>
+</body>
+</html>
