@@ -130,9 +130,11 @@
     <p style="font-size:15px;margin:0">Give it a described operational process (in <code>materials/kolibri/</code>, or one of your own) and it drafts the 11 steps of the Kolibri wizard
     (Basics → Owner → Problem → Impact → Data → Solution → Interface → Security → Readiness → Timeline → Review), deciding whether the case is deterministic, agentic or hybrid.
     <strong>Loop:</strong> it scores itself against the included rubric (10 criteria) and improves until ≥8/10. <em>What comes out of this one can enter Kolibri for real tomorrow.</em></p></div>
-  <div class="ej"><h4>D · The signals watchtower <span class="dif d2">Medium</span></h4>
-    <p style="font-size:15px;margin:0">Give it the 13 signals from the Konecta 2030 report (CSV) plus a package of "this quarter's news" (fictional). It decides which thresholds
-    have been crossed and drafts the note to the committee: which signals fired, which scenario weights move, and which pre-agreed action is due. <strong>Loop:</strong> every conclusion must cite its news item and its threshold — otherwise it drops it and continues.</p></div>
+  <div class="ej"><h4>D · The early-warning watchtower <span class="dif d2">Medium</span></h4>
+    <p style="font-size:15px;margin:0">Give it a market watchlist — 13 industry indicators, each with a threshold and a pre-agreed action (CSV in <code>materials/senales/</code>) —
+    plus a package of "this quarter's news" (fictional). It decides which thresholds have actually been crossed and drafts the alert note to the committee:
+    which indicators fired, which didn't (and how close they came), and which pre-agreed action is due. <strong>Loop:</strong> every conclusion must cite its news item and its
+    threshold — otherwise it drops it and continues. Beware: the news package contains near-misses designed to punish rounding up.</p></div>
   <div class="ej"><h4>E · The tough-customer sparring partner <span class="dif d3">Bold</span></h4>
     <p style="font-size:15px;margin:0">Build an agent that plays an angry customer (scenario script in <code>materials/sparring/</code>) to train responses,
     then scores the conversation against a Konecta-style quality rubric. <strong>Loop:</strong> the agent raises the difficulty when the response was good, lowers it when it wasn't. The most fun to demo.</p></div>
@@ -192,10 +194,9 @@ the evaluation table of every round so we can see how you improved.</div>
   <h2>Why the loop matters</h2>
   <p class="destacado">An LLM answers. An agent <em>pursues</em>. The difference isn't intelligence — it's architecture:
   objective + self-evaluation + iteration.</p>
-  <p>Everything you'll see in the 2030 projection — agents resolving interactions end-to-end, agents supervising other
-  agents, agents negotiating with customers' agents — is this same loop you just built, with more zeros on the budget.
-  When the report says "1 human supervisor per 22 AI agents", you'll know exactly what that human supervises:
-  the evaluation tables of thousands of loops like yours.</p>
+  <p>Everything you'll see in the 2030 projection after this workshop — where this loop meets 120,000 people and
+  €2 billion of revenue — is the same architecture you just built, with more zeros on the budget. Keep your
+  evaluation tables in mind when you get there: you'll recognize old friends.</p>
 </section>
 
 <section id="demo-day">
