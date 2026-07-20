@@ -34,6 +34,18 @@
   background: var(--indigo); padding: 11px 20px; border-radius: 999px; margin-top: 8px;
 }
 .btncard:hover { background: #4f42e0; }
+.cat357 { margin: 14px 0 4px; font-family: var(--sans); }
+.cat357 .cname {
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--indigo);
+  font-weight: 700; margin-bottom: 6px;
+}
+.chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip {
+  font: 500 13px var(--sans); background: var(--papel-alto); border: 1px solid var(--linea);
+  border-radius: 999px; padding: 5px 13px; color: var(--tinta);
+}
+.chip.builtin { background: var(--indigo-suave); border-color: var(--indigo); color: var(--indigo); font-weight: 700; }
+.chip.mcp { background: var(--tinta); border-color: var(--tinta); color: #fff; font-weight: 700; }
 </style>
 </head>
 <body>
@@ -107,6 +119,24 @@
   <p style="margin:0">Build phases 1-2 with <strong>the folder only</strong> - capability multiplies scope creep.
   Add <strong>one</strong> connector in phase 3 if you're ahead of the clock. Which connectors are enabled on your
   machine depends on IT's setup - the room's support person has the list.</p></div>
+
+  <h3>The catalog: what can be connected</h3>
+  <p class="suave" style="font-family:var(--sans);font-size:14px">A snapshot of commonly available Claude connectors - the catalog grows monthly,
+  and <strong>the enabled list on your machines is the one IT hands out today</strong>:</p>
+  <div class="cat357"><div class="cname">Built in - no setup</div>
+    <div class="chips"><span class="chip builtin">Web search</span><span class="chip builtin">Web browsing</span><span class="chip builtin">Files &amp; folders</span><span class="chip builtin">Documents, spreadsheets &amp; PDFs</span></div></div>
+  <div class="cat357"><div class="cname">Files &amp; knowledge</div>
+    <div class="chips"><span class="chip">Google Drive</span><span class="chip">SharePoint</span><span class="chip">OneDrive</span><span class="chip">Box</span><span class="chip">Dropbox</span><span class="chip">Notion</span><span class="chip">Confluence</span></div></div>
+  <div class="cat357"><div class="cname">Communication &amp; calendar</div>
+    <div class="chips"><span class="chip">Gmail</span><span class="chip">Outlook</span><span class="chip">Slack</span><span class="chip">Microsoft Teams</span><span class="chip">Google Calendar</span><span class="chip">Outlook Calendar</span></div></div>
+  <div class="cat357"><div class="cname">Work management</div>
+    <div class="chips"><span class="chip">Jira</span><span class="chip">Asana</span><span class="chip">Linear</span><span class="chip">Trello</span><span class="chip">monday.com</span></div></div>
+  <div class="cat357"><div class="cname">Business systems</div>
+    <div class="chips"><span class="chip">Salesforce</span><span class="chip">HubSpot</span><span class="chip">Zendesk</span><span class="chip">Intercom</span><span class="chip">Stripe</span></div></div>
+  <div class="cat357"><div class="cname">And everything else</div>
+    <div class="chips"><span class="chip">Zapier (thousands of apps)</span><span class="chip">Canva</span><span class="chip">Figma</span><span class="chip mcp">Custom MCP - your internal systems (the Kolibri route)</span></div></div>
+  <p class="suave" style="font-family:var(--sans);font-size:13px;margin-top:12px">The last chip is the strategic one: MCP (Model Context Protocol) is the open standard
+  that lets IT connect <em>any</em> internal system - order management, WFM, CRM propio - to an agent. Everything on this page runs on it.</p>
 
   <h3>Worked example: the LIVE radar (web search)</h3>
   <p class="suave" style="font-family:var(--sans);font-size:14px">Finished the Exercise A loop with time to spare? This is what a connector power-up looks like:</p>
