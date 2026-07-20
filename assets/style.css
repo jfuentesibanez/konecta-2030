@@ -171,7 +171,18 @@ details.formulas pre {
 }
 
 /* ---------- Escenarios ---------- */
-.esc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; margin-top: 24px; }
+/* breaks out of the 860px editorial column so all four scenarios sit on one row */
+.esc-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 24px;
+  width: min(1200px, calc(100vw - 48px));
+  margin-left: 50%; transform: translateX(-50%);
+}
+@media (max-width: 1020px) {
+  .esc-grid { grid-template-columns: repeat(2, 1fr); width: auto; margin-left: 0; transform: none; }
+}
+@media (max-width: 560px) {
+  .esc-grid { grid-template-columns: 1fr; }
+}
 .esc { border-radius: 14px; border: 1px solid var(--linea); background: var(--papel-alto); padding: 22px; font-family: var(--sans); }
 .esc .peso { font-size: 34px; font-weight: 800; letter-spacing: -.02em; }
 .esc h3 { margin: 2px 0 10px; font-family: var(--serif); }
