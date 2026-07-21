@@ -16,8 +16,8 @@
     <a href="#tesis">Thesis</a>
     <a href="#cronologia">2026→2030</a>
     <a href="357.html">3·5·7 ↗</a>
-    <a href="#simulador">Simulator</a>
     <a href="#escenarios">Scenarios</a>
+    <a href="#simulador">Simulator</a>
     <a href="#senales">Signals</a>
     <a href="#decisiones">Decisions</a>
     <a href="#plan90">90-day plan</a>
@@ -196,9 +196,9 @@
         <h3>The decision</h3>
         <p>The moment when protecting current revenue and building future revenue stop being compatible.
         Cannibalizing your own account with AI costs revenue today; not doing it hands that account to a third party
-        tomorrow. What the committee decides in the 12 months before this point determines which of the three
+        tomorrow. What the committee decides in the 12 months before this point determines which of the four
         scenarios materializes. <strong>This is where the report stops being a story and becomes yours: the simulator
-        (section 04) lets you choose your beliefs and see their consequences.</strong></p>
+        (section 05) lets you choose your beliefs and see their consequences.</strong></p>
       </div>
       <div class="fase" data-dash='{"periodo":"2028","auto":58,"coste":"$0.003","costePct":16,"arr":"~$4B","arrPct":50}'>
         <div class="fase-fecha">2028 · KATALYST CHECKPOINT</div>
@@ -216,7 +216,7 @@
         <p>The fog clears. By 2029, ~72% of historical interaction volume is automatable end-to-end at ≥ human quality
         (central estimate). The global CX/BPO sector has reorganized: those who cannibalized in time operate fleets of
         AI agents - one human overseeing 25+ - with people concentrated in the high-value, high-empathy work;
-        those who didn't compete in a price auction over a shrinking human volume. Section 05 describes the four
+        those who didn't compete in a price auction over a shrinking human volume. Section 04 describes the four
         Konectas that can exist in 2030. <span class="tag dr">✓ DR3</span></p>
       </div>
     </div>
@@ -230,9 +230,69 @@
   </div>
 </section>
 
-<!-- ============ 04 · SIMULATOR ============ -->
-<section id="simulador">
+<main>
+<!-- ============ 04 · SCENARIOS ============ -->
+<section id="escenarios">
   <span class="num">04</span>
+  <h2>The four scenarios</h2>
+  <p>There were three scenarios in this report - until the cross-model red team ran. <strong>Both frontier models,
+  independently, flagged the same missing future</strong> (S4), and both cut the weight of Metamorphosis.
+  Weights below are the post-red-team synthesis; the votes are shown transparently. They are not predictions:
+  they are probability masses that the signals in section 06 will shift every quarter.</p>
+  <div class="esc-grid">
+    <div class="esc s1"><div class="peso">35%</div><h3>S1 · Erosion</h3>
+      <p><strong>The reaction comes late.</strong> Konecta protects its current revenue; clients in-source
+      or migrate to disruptors; renewals enter a price war. The end state is the worst negotiating position a BPO
+      can hold: clients keep the AI layer and buy only "human fallback as a utility" <span class="tag dr">✓DR1</span>.
+      In 2030: similar nominal revenue, compressed margin, a declining BPO multiple, and a workforce transition
+      done under duress - expensive, rushed, and without the cash to negotiate it well.</p></div>
+    <div class="esc s2"><div class="peso">30%</div><h3>S2 · Metamorphosis</h3>
+      <p><strong>Cannibalize yourself before others do.</strong> Konecta proactively migrates its accounts to its own
+      AI agents priced per resolution, turns Kolibri into a business line and its operational knowledge into the moat.
+      The move is proven in both directions: Crescendo (AI-native) bought a BPO to industrialize it; TaskUs (BPO)
+      shifted its mix until traditional CX is only ~45% of revenue <span class="tag dr">✓DR1</span>.
+      And hyper-regulation becomes the moat: DORA + AI Act compliance is so onerous it expels pure AI startups from
+      corporate B2B - Konecta, already ISO 42001-certified, sells banks the legal shield to deploy AI without owning
+      the risk <span class="tag dr">✓DR4</span>. The margin prize is real: CX software runs at 55-66% gross margin vs ~15%
+      for BPO - Kolibri-as-product is the claim on that layer <span class="tag dr">✓DR2</span>.
+      In 2030: a smaller but far more qualified workforce, an unrecognizable mix, higher margin, and the
+      algorithmic-humanism thesis turned into competitive advantage - humans exactly where they add the most value.</p></div>
+    <div class="esc s3"><div class="peso">15%</div><h3>S3 · Human Fortress</h3>
+      <p><strong>Adoption disappoints.</strong> Reliability, regulation and customer preference slow deep automation;
+      human interaction gains a value premium. This scenario has real evidence behind it: Klarna partially re-hired
+      humans after quality eroded; only 20% of organizations had actually cut agent headcount by 2026; and Spain's
+      draft law would make AI-only service illegal, mandating a human within 3 minutes
+      <span class="tag dr">✓DR1 · DR4</span>. In 2030: human BPO endures as a premium category,
+      and whoever kept capacity and quality - while still automating the basics - captures that premium.
+      The risk of this scenario is not living it: it is using it as an excuse not to decide.
+      The sharpest version of this play, from the red team: become the global monopoly on the <em>hardest</em> 15-50% -
+      grave complaints, borderline fraud, vulnerable customers, litigation risk - the volume AI can never legally own,
+      priced accordingly.</p></div>
+    <div class="esc s4"><div class="peso">20%</div><h3>S4 · Platform Capture</h3>
+      <p><strong>Konecta executes well - and still loses the valuable layer.</strong> Salesforce, Google, Microsoft and
+      the CCaaS vendors ship native agents inside the licenses where client data already lives. Clients neither in-source
+      nor buy Konecta's AI: they switch a module on. Konecta transforms, grows "AI-led" revenue - and becomes a channel:
+      an implementer and operator of someone else's platform, keeping service margin while the platform keeps product,
+      data, pricing and roadmap. <strong>The uncomfortable edge:</strong> the Google alliance that powers Konecta's
+      capabilities is also the single most plausible path into this scenario. Both red-team models proposed this
+      future independently. <span class="tag dr">△ RT ×2</span></p></div>
+  </div>
+  <p class="nota-votos">GPT 5.6 SOL: 40/30/10/20 · Gemini Deep Think: 50/15/15/20 ·
+  <strong>synthesis shown: 35/30/15/20</strong>. Red-teamers structurally over-discount incumbent agency; Konecta's real assets
+  (ISO 42001, Kolibri in production, ~500 enterprise relationships) justify S2 above the red-team average. The committee should
+  debate exactly this delta.</p>
+  <div class="caja nota"><h4>The stress test of algorithmic humanism</h4>
+  <p style="margin:0">All four scenarios take the same hypothesis seriously: that empathy, judgment and human
+  connection have lasting economic value. The difference between S2 and S1 is not believing or not believing in
+  the human - it is whether that belief becomes an active strategy (choosing where humans win and automating the rest)
+  or a passive alibi (waiting for the market to confirm it). The simulator - next section - lets you find the exact point
+  where one turns into the other.</p></div>
+</section>
+</main>
+
+<!-- ============ 05 · SIMULATOR ============ -->
+<section id="simulador">
+  <span class="num">05</span>
   <h2>The simulator - the cockpit</h2>
   <p style="max-width:760px">This model does not predict the future: it shows the consequences of beliefs.
   Move the six levers according to your own reading of the world and watch which Konecta that reading produces in 2030.
@@ -348,64 +408,6 @@ consequential, never precise. The per-account "board table"
 </section>
 
 <main>
-<!-- ============ 05 · SCENARIOS ============ -->
-<section id="escenarios">
-  <span class="num">05</span>
-  <h2>The four scenarios</h2>
-  <p>There were three scenarios in this report - until the cross-model red team ran. <strong>Both frontier models,
-  independently, flagged the same missing future</strong> (S4), and both cut the weight of Metamorphosis.
-  Weights below are the post-red-team synthesis; the votes are shown transparently. They are not predictions:
-  they are probability masses that the signals in section 06 will shift every quarter.</p>
-  <div class="esc-grid">
-    <div class="esc s1"><div class="peso">35%</div><h3>S1 · Erosion</h3>
-      <p><strong>The reaction comes late.</strong> Konecta protects its current revenue; clients in-source
-      or migrate to disruptors; renewals enter a price war. The end state is the worst negotiating position a BPO
-      can hold: clients keep the AI layer and buy only "human fallback as a utility" <span class="tag dr">✓DR1</span>.
-      In 2030: similar nominal revenue, compressed margin, a declining BPO multiple, and a workforce transition
-      done under duress - expensive, rushed, and without the cash to negotiate it well.</p></div>
-    <div class="esc s2"><div class="peso">30%</div><h3>S2 · Metamorphosis</h3>
-      <p><strong>Cannibalize yourself before others do.</strong> Konecta proactively migrates its accounts to its own
-      AI agents priced per resolution, turns Kolibri into a business line and its operational knowledge into the moat.
-      The move is proven in both directions: Crescendo (AI-native) bought a BPO to industrialize it; TaskUs (BPO)
-      shifted its mix until traditional CX is only ~45% of revenue <span class="tag dr">✓DR1</span>.
-      And hyper-regulation becomes the moat: DORA + AI Act compliance is so onerous it expels pure AI startups from
-      corporate B2B - Konecta, already ISO 42001-certified, sells banks the legal shield to deploy AI without owning
-      the risk <span class="tag dr">✓DR4</span>. The margin prize is real: CX software runs at 55-66% gross margin vs ~15%
-      for BPO - Kolibri-as-product is the claim on that layer <span class="tag dr">✓DR2</span>.
-      In 2030: a smaller but far more qualified workforce, an unrecognizable mix, higher margin, and the
-      algorithmic-humanism thesis turned into competitive advantage - humans exactly where they add the most value.</p></div>
-    <div class="esc s3"><div class="peso">15%</div><h3>S3 · Human Fortress</h3>
-      <p><strong>Adoption disappoints.</strong> Reliability, regulation and customer preference slow deep automation;
-      human interaction gains a value premium. This scenario has real evidence behind it: Klarna partially re-hired
-      humans after quality eroded; only 20% of organizations had actually cut agent headcount by 2026; and Spain's
-      draft law would make AI-only service illegal, mandating a human within 3 minutes
-      <span class="tag dr">✓DR1 · DR4</span>. In 2030: human BPO endures as a premium category,
-      and whoever kept capacity and quality - while still automating the basics - captures that premium.
-      The risk of this scenario is not living it: it is using it as an excuse not to decide.
-      The sharpest version of this play, from the red team: become the global monopoly on the <em>hardest</em> 15-50% -
-      grave complaints, borderline fraud, vulnerable customers, litigation risk - the volume AI can never legally own,
-      priced accordingly.</p></div>
-    <div class="esc s4"><div class="peso">20%</div><h3>S4 · Platform Capture</h3>
-      <p><strong>Konecta executes well - and still loses the valuable layer.</strong> Salesforce, Google, Microsoft and
-      the CCaaS vendors ship native agents inside the licenses where client data already lives. Clients neither in-source
-      nor buy Konecta's AI: they switch a module on. Konecta transforms, grows "AI-led" revenue - and becomes a channel:
-      an implementer and operator of someone else's platform, keeping service margin while the platform keeps product,
-      data, pricing and roadmap. <strong>The uncomfortable edge:</strong> the Google alliance that powers Konecta's
-      capabilities is also the single most plausible path into this scenario. Both red-team models proposed this
-      future independently. <span class="tag dr">△ RT ×2</span></p></div>
-  </div>
-  <p class="nota-votos">GPT 5.6 SOL: 40/30/10/20 · Gemini Deep Think: 50/15/15/20 ·
-  <strong>synthesis shown: 35/30/15/20</strong>. Red-teamers structurally over-discount incumbent agency; Konecta's real assets
-  (ISO 42001, Kolibri in production, ~500 enterprise relationships) justify S2 above the red-team average. The committee should
-  debate exactly this delta.</p>
-  <div class="caja nota"><h4>The stress test of algorithmic humanism</h4>
-  <p style="margin:0">All four scenarios take the same hypothesis seriously: that empathy, judgment and human
-  connection have lasting economic value. The difference between S2 and S1 is not believing or not believing in
-  the human - it is whether that belief becomes an active strategy (choosing where humans win and automating the rest)
-  or a passive alibi (waiting for the market to confirm it). The simulator lets you find the exact point
-  where one turns into the other.</p></div>
-</section>
-
 <!-- ============ 06 · SIGNALS ============ -->
 <section id="senales">
   <span class="num">06</span>
@@ -498,7 +500,7 @@ consequential, never precise. The per-account "board table"
 <section id="plan90">
   <span class="num">08</span>
   <h2>90-day plan - no-regret moves</h2>
-  <p>Valid in all three scenarios. None requires betting on one particular future.</p>
+  <p>Valid in all four scenarios. None requires betting on one particular future.</p>
   <table>
     <thead><tr><th>#</th><th>Move</th><th>90-day deliverable</th></tr></thead>
     <tbody>
